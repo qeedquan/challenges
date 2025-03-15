@@ -1,0 +1,64 @@
+***
+
+Ax = b 
+
+3 outcomes
+Unique solution (where A is a square matrix with full rank)
+
+Solved using:
+Gauss elimination
+Inversion x = A^-1 * b
+Cholesky decomposition chol(A) = L*L^T with lower triangular matrix L, L*y = b, L^T*x = y, works well for sparse matrix 
+QR Decomposition
+Conjugate gradients
+
+Overdetermined (more observations than parameters)
+Common real world situation, no exact solution
+Minimize ||Ax - b||
+
+Solved using:
+Ordinary least squares
+x = (A^T * A)^-1 * A^T * b
+
+Underdetermined
+Infinitely many solutions or no solution if inconsistent
+Not enough information available
+Find x which Ax = b and minimizes ||x||
+x = A^T * (A * A^T)^-1 * b
+
+***
+
+Ax = 0
+
+null(A) gives all vector x such that Ax = 0
+dim(A) = dim(null(A)) + rank(A)
+
+There are rank(A) non-zero eigenvalues, dim(null(A)) eigenvalues are zero
+Eigenvectors that corresponds to zero eigenvalues form null(A)
+
+If A is square, real, symmetric, and has non-negative eigenvalues, then eigenvalues equals to singular values
+
+Singular vectors and values are also defined for non-square matrices
+
+Use SVD to find singular values and vectors
+
+A = U * D * V^T
+A (MxN) = U (MxM) * D (MxN) * V^T (NxN)
+D is a diagonal matrix of singular values sorted large to small
+U, V are orthogonal matrices
+V^T stores corresponding singular vectors to the values
+
+To use SVD to solve Ax = 0
+Decompose A into U*D*V^T
+Check smallest singular value in D is zero
+If so, then the last column of V is the non-trivial solution x to Ax = 0
+If not, no trivial solution but the last column of V represents the vector that minimizes ||Ax|| under ||x||=1
+
+***
+
+Skew symmetric matrices have the property of:
+S^T = -S
+
+Can be useful in making cross product a matrix multiply
+Shows up in derivatives of rotation matrices
+

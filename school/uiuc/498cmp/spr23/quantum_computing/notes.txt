@@ -1,0 +1,206 @@
+*** Big Idea
+
+Quantum computing uses 3 ideas of quantum mechanics to get speed ups:
+1. Superposition (Setting up the states)
+2. Entanglement (Encoding the algorithm into the states)
+3. Interference (Getting the solution we want after measurement)
+
+*** Qubit
+
+In classical computing, a wire carries a state of 0 or 1.
+In quantum computing, a wire can carry a state that is in a superposition of 0 and 1.
+
+Such a state (qubit) can be written using the Dirac notation:
+
+|ψ1⟩ = sqrt(0.2)|0⟩ + i*sqrt(0.8)|1⟩
+This is saying sqrt(0.2) in 0 state and i*sqrt(0.8) in 1 state.
+
+When we say a “the wire is in state X”, we mean “the qubit carried by the wire is in state X”.
+
+Notice a couple things about these amplitudes:
+First, amplitudes can be positive, negative, or complex
+Second, the sum of the absolute value of the amplitudes squared has to equal 1.
+
+The Bloch sphere is a geometrical representation of the pure state space of a two-level quantum mechanical system (qubit),
+Can visualize N Independent qubits as N bloch spheres.
+
+For classical computers, two states:
+00, 01, 10, 11
+
+For quantum computers, two states:
+(Write all enumerations of the classical states, then add a multiplication factor)
+α|00⟩ + β|01⟩ + γ|10⟩ + δ|11⟩
+
+There’s another (less general) way to represent what’s going on in two wires.
+
+Suppose wire 0 is in the state
+sqrt(0.2)|0⟩ + sqrt(0.8)|1⟩
+
+and wire 1 is in the state
+sqrt(0.4)|0⟩ - sqrt(0.6)|1⟩
+
+The total state can be represented by:
+sqrt(0.2)|0⟩ + sqrt(0.8)|1⟩ ⊗ sqrt(0.4)|0⟩ - sqrt(0.6)|1⟩
+
+The ⊗ operator is known as a tensor product.
+This operation is equivalent to the following:
+
+sqrt(0.2*0.4)|00⟩ - sqrt(0.2*0.6)|01⟩ + sqrt(0.8*0.4)|10⟩ - sqrt(0.8*0.6)|1⟩
+Note how you multiply the factors in state (0, 0), (0, 1), (1, 0), (1, 1) together.
+
+Another way to represent a qubit is using the vector notation:
+Represent it using a vector of length 2^n where n=number of wires, so 2 wires 2^2 = 4 elements in a vector
+These elements are also known as "computational basis states", usually its graphed in the XY plane vs
+the probability of that basis state being outputted in a measurement.
+
+To convert from dirac notation to vector notation:
+The amplitude in front of |00⟩ goes to the 0’th spot in the vector; the amplitude in front of |01⟩ goes to the 1’st spot; etc.
+
+We denote by ∣a⟩ the column vector having a 1 in the entry corresponding to a ∈ Σ, with 0 for all other entries:
+If Σ = {0, 1}, then
+∣0⟩ = [1]
+      [0]
+|1⟩ = [0]
+      [1]
+
+[3/4
+ 1/4] = 3/4*∣0⟩ + 1/4*|1⟩
+
+∣X⟩ = column vector
+⟨X∣ = row vector
+
+We denote by ⟨a∣ the row vector having a 1 in the entry corresponding to a ∈ Σ, with 0 for all other entries.
+Example:
+If Σ = {0, 1}, then ⟨0∣ = (1 0) and ⟨1∣ = (0 1)
+
+⟨a∣b⟩ = ⟨a∣∣b⟩ = dot/inner product between the row and column vector.
+If a and b are these 1/0 value vectors, then the dot product gives:
+1 if a = b
+0 if a != b
+
+∣0⟩⟨0∣ = outer product between row and column vector.
+If these are 1/0 value vectors, then the outer product gives:
+1 in (a, b) entry and 0 for all other entries.
+
+*** Vector Notation
+
+A probability vector is a column vector of a probability of a state happening in each index, it has the following properties:
+All entries are nonnegative real numbers.
+The sum of the entries is 1.
+
+For a boolean function that maps a = f(a), there is a matrix that can represent f(a) for all inputs a.
+This matrix has exactly one 1 in each column, and 0 for all other entries.
+
+M(b, a) => 1 if b  = f(a)
+           0 if b != f(a)
+
+Example:
+
+f1(0) = 0
+f1(1) = 0
+
+f2(0) = 0
+f2(1) = 1
+
+f3(0) = 1
+f3(1) = 0
+
+f4(0) = 1
+f4(1) = 1
+
+These maps to the matrices:
+
+M1 = [[1 1] [0 0]]
+M2 = [[1 0] [0 1]]
+M3 = [[0 1] [1 0]]
+M4 = [[0 0] [1 1]]
+
+∣+⟩ = 1/sqrt(2)*∣0⟩ + 1/sqrt(2)*∣1⟩
+∣-⟩ = 1/sqrt(2)*∣0⟩ - 1/sqrt(2)*∣1⟩
+
+∣ψ⟩ = arbitrary vector
+∣ψ⟩† = ⟨ψ∣ (conjugate transpose; this is abuse of notation when converting to row vector)
+
+*** Hadamard Gate
+
+----H---- (Applies to one wire/qubit)
+
+|0⟩ => 1/sqrt(2) * (|0⟩ + |1⟩)
+|1⟩ => 1/sqrt(2) * (|0⟩ - |1⟩)
+
+Because Quantum Mechanics is linear, we can find all other states by linear combination:
+
+α|0⟩ + β|1⟩ = (α + β)/sqrt(2) * |0⟩ + (α − β)/sqrt(2) * |1⟩
+
+There is another way to get this result by thinking about matrices. The Hadamard is represented by the matrix
+
+H = 1/sqrt(2) * [[1 1] [1 -1]]
+
+If I want the state of a wire after the Hadamard is applied to the state α|0⟩+β|1⟩ which is represented by the vector v=[α,β]. I can simply compute Hv.
+
+The square of the Hadamard gate is just the identity gate: H^2 = I. Thus, applying the Hadamard gate to the same qubit twice in a row has no effect on it.
+The Hadamard gate can also be expressed as a 90º rotation around the Y-axis, followed by a 180º rotation around the X-axis. So, 
+H = XY^(0.5)
+H = Y^(-0.5)X
+
+*** Phase Gate
+
+The Phase(θ) gate works exactly like the Hadamard does. It’s a single gate which applies to one wire
+
+----P(θ)----
+
+|0⟩ => |0⟩
+|1⟩ => exp(i*θ) * |1⟩
+
+Matrix form:
+H = [[1 0] [0 exp(i*θ)]]
+
+
+*** CNOT gate
+
+The CNOT gate is slightly subtle. It spans two wires
+
+--.---
+  |
+--o---
+
+Therefore to describe it we have to describe how it acts on four basis elements and give it a 4×4 matrix.
+Obviously when you pad with identities you should only include identities for the wires which it is not on.
+
+|00⟩ => |00⟩
+|01⟩ => |01⟩
+|10⟩ => |11⟩
+|11⟩ => |10⟩
+
+Matrix form:
+H = [[1 0 0 0] [0 1 0 0] [0 0 0 1] [0 0 1 0]]
+
+*** CSWAP gate
+Also known as Fredkin gate
+
+*** CCNOT gate
+Also known as Tofolli Gate
+
+*** Classical vs Quantum Gate
+
+A classical boolean function can be converted to NAND gates since NAND gates are universal.
+If the boolean function takes O(T) time (assuming each gate takes O(1) time), the number of NAND gates needed to implement it is O(T log T)
+
+The quantum gate that are universal is the CNOT, Phase, and Hadamard gate.
+
+A NAND gate is not reversible since there are multiple ways to get the same output from different inputs.
+A Quantum gate is reversible however, so there is a complication translating a classical circuits made from NAND to a quantum circuit.
+
+Replace NAND gate with a gate that is reversible, control-control-not (also called a toffeli gate)
+The NAND gate has two inputs and one output. The toffeli has three inputs and three outputs.
+Choose two toffeli inputs and (either a |0⟩or |1⟩ to map to (which order?) the three inputs of the toffeli so that one of the toffeli outputs is a NAND b.
+
+*** Qubit vs Qumodes
+
+Different method of encoding information into a quantum state.
+
+Qumodes use photons to encode information.
+A qumode is a quantum-mechanical harmonic oscillator (like a spring/pendulum/etc)
+A photonic quantum computer could theoretically be faster than a qubit one since it is continous
+Known as continuous-variable (CV) quantum information,
+

@@ -1,0 +1,22 @@
+/*
+
+Query all columns for all American cities in the CITY table with populations larger than 100000. The CountryCode for America is USA.
+
+The CITY table is described as follows:
+
+       CITY
+FIELD        TYPE
+ID           NUMBER
+NAME         VARCHAR2(127)
+COUNTRYCODE  VARCHAR2(3)
+DISTRICT     VARCHAR2(20)
+POPULATION   NUMBER
+
+*/
+
+Create table If Not Exists CITY (id number, name varchar2(127), countrycode varchar2(3), district varchar2(20), population number);
+insert into CITY values (1, 'TOKYO', 'JPN', 'SHIBUYA', 1100);
+insert into CITY values (2, 'ZZTOK', 'CRN', 'WAPON', 1100000);
+insert into CITY values (3, 'FGK', 'USA', 'JMX', 1100000);
+insert into CITY values (4, 'PFWKG', 'USA', 'JG', 5000);
+Select * from City where POPULATION > 100000 and CountryCode ="USA";

@@ -1,0 +1,23 @@
+Counting
+Add the following
+1+2+3+4+5+6+7+8+9+10=?
+A:55
+
+Law of SAMEness
+3/4 + 1/6 = ?
+A:11/12
+
+Proportional Thinking
+Three candies cost 25 cents. How many candies can you buy for $1.00?
+3*4 = 12
+A: 12 candies
+
+Quantity and Denomination
+Give two names for the fraction of the circle that is shaded.
+A: 6/9, 2/3
+
+Wholes and Parts
+A game lasts 45 minutes. How many minutes is two-thirds of the game?
+2/3 * 45 = 30
+A: 30 minutes
+

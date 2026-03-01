@@ -1,0 +1,96 @@
+/*
+
+You are given an integer array nums.
+
+You must repeatedly apply the following merge operation until no more changes can be made:
+
+If any two adjacent elements are equal, choose the leftmost such adjacent pair in the current array and replace them with a single element equal to their sum.
+After each merge operation, the array size decreases by 1. Repeat the process on the updated array until no more changes can be made.
+
+Return the final array after all possible merge operations.
+
+Example 1:
+
+Input: nums = [3,1,1,2]
+
+Output: [3,4]
+
+Explanation:
+
+The middle two elements are equal and merged into 1 + 1 = 2, resulting in [3, 2, 2].
+The last two elements are equal and merged into 2 + 2 = 4, resulting in [3, 4].
+No adjacent equal elements remain. Thus, the answer is [3, 4].
+Example 2:
+
+Input: nums = [2,2,4]
+
+Output: [8]
+
+Explanation:
+
+The first two elements are equal and merged into 2 + 2 = 4, resulting in [4, 4].
+The first two elements are equal and merged into 4 + 4 = 8, resulting in [8].
+Example 3:
+
+Input: nums = [3,7,5]
+
+Output: [3,7,5]
+
+Explanation:
+
+There are no adjacent equal elements in the array, so no operations are performed.
+
+
+
+Constraints:
+
+1 <= nums.length <= 10^5
+1 <= nums[i] <= 10^5
+
+Hint 1
+Process the array from left to right using a stack-like structure
+
+Hint 2
+When the current value equals the top of the stack, merge them by replacing with their sum and continue checking
+
+Hint 3
+The remaining stack elements form the final array
+
+*/
+
+package main
+
+import (
+	"fmt"
+	"reflect"
+)
+
+func main() {
+	test([]int{3, 1, 1, 2}, []int{3, 4})
+	test([]int{2, 2, 4}, []int{8})
+	test([]int{3, 7, 5}, []int{3, 7, 5})
+}
+
+func assert(x bool) {
+	if !x {
+		panic("assertion failed")
+	}
+}
+
+func test(array, expected []int) {
+	result := merge(array)
+	fmt.Println(result)
+	assert(reflect.DeepEqual(result, expected))
+}
+
+func merge(array []int) []int {
+	result := []int{}
+	for _, value := range array {
+		for len(result) > 0 && result[len(result)-1] == value {
+			result = result[:len(result)-1]
+			value *= 2
+		}
+		result = append(result, value)
+	}
+	return result
+}

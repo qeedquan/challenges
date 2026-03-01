@@ -1,0 +1,109 @@
+*** Circuit
+Circuit comes from the word circle. A circuit is a collection of components, power sources, and signal sources, all connected so current can flow in a complete circle. You can also call a circuit a network.
+
+*** Closed circuit
+A circuit is closed if the circle is complete, if all currents have a path back to where they came from.
+
+*** Open circuit
+A circuit is open if the circle is not complete, if there is a gap or opening in the path.
+
+*** Short circuit
+A short is a path of low resistance. It is usually by mistake. The resistor shown below is the intended path for current, and the curved wire going around it is the short. Current is diverted away from its intended path, sometimes with damaging results. The wire shorts out the resistor by providing a low-resistance path for current (probably not what the designer intended).
+
+*** Make or break
+You make a circuit by closing the current path, such as when you close a switch. Breaking a circuit is the opposite. Opening a switch breaks the circuit.
+The phrase “make or break situation” means whatever happens the outcome is definitely going in one of two directions.
+
+*** Schematic
+A schematic is a drawing of a circuit. A schematic represents circuit elements with symbols and connections as lines.
+
+*** Elements and components
+The term element means a component or a source. The term component refers to resistors, capacitors, inductors, transistors, etc. I typically don’t include sources when I say component.
+
+*** Symbols
+Elements are represented in schematics by symbols. Here are the symbols for the common 2-terminal elements.
+Resistor, capacitor, inductor, voltage source, current source
+
+*** Lines
+Connections between elements are drawn as lines, which we often think of as “wires.” When drawn on a schematic, lines represent perfect conductors with zero resistance. Every component or source terminal touched by a line has the same voltage.
+
+*** Dots
+Connections between lines can be indicated by dots. Dots are an unambiguous indication that lines are connected. If the connection is obvious, you don’t have to use a dot.
+
+*** Node
+A junction wher 2 or more elements connect is called a node.
+
+Depending on your textbook or web resource, you may come across other definitions of node. In some texts a node is defined as the junction between 3 or more elements.
+Another term you may come across is essential node. This also means a node with 3 or more connected elements.
+In this teaching style, nodes have 2 or more connections, and essential nodes have 3 or more.
+Here at Spinning Numbers, I use the definition where a node is the junction between 2 or more elements. This 2-element definition is used by circuit simulation programs like SPICE because every junction has to have a unique name.
+All these shades of meaning have the same objective. There's no need to worry about which way is right. If you use another reference alongside Spinning Numbers, check the definition of node to see if it's the same as we use here.
+
+NOTE: This is confusing since in computer science a node represents an element in this terminology rather than a junction (which is called an edge in computer science terms).
+Be sure to mentally switch while reading computer science vs electronics literature.
+
+*** Branch
+A branch is a connection between nodes. A branch contains an element (resistor, capacitor, source, etc.). The number of branches in a circuit is the same as the number of elements.
+
+NOTE: This is confusing since in computer science a branch is an edge, and not an element (which is considered a node in computer science terms).
+Be sure to mentally switch while reading computer science vs electronics literature.
+
+*** Loop
+A loop is any closed path going through circuit elements. To draw a loop, select any node as a starting point and draw a path through elements and nodes until the path comes back to the node where you started.
+There is only one rule: a loop can visit (pass through) a node only one time.
+It is ok if loops overlap or contain other loops. Some of the loops in our circuit are shown here. (You can find others, too. If I counted right, there are six.)
+
+*** Mesh
+A mesh is a loop that has no other loops inside it. You can think of this as one mesh for each “open window” of a circuit.
+
+*** Reference Node
+
+During circuit analysis we usually pick one of the nodes in the circuit to be the reference node. We assign a voltage of $v = 0$ to the reference node. Voltages at the other nodes are measured relative to the reference node.
+
+You can pick any node to be the reference node, but two common choices that simplify circuit analysis are,
+
+
+  the negative terminal of the source powering the circuit, or
+  the node connected to the greatest number of branches.
+
+*** Ground
+The reference node is often referred to as ground. The concept of ground has three important meanings.
+
+A metal stake driven into the ground next to a home. The wire clamped to the stake curves up to the right to provide the safety ground reference for the home’s electrical system. Sometimes the grounding wire is clamped to a water pipe where the pipe disappears into the Earth.
+
+Ground is
+
+the reference point from which voltages are measured,
+the return path carrying electric current back to its source,
+a direct physical connection to the Earth, for safety.
+
+Any electric device plugged into the wall has very high voltages inside 110, V or 220 V. If something inside the device fails the high voltage might touch the metal case. If you touch the device you will get a very dangerous shock.
+
+For safety, devices have a feature to direct the dangerous current into the Earth rather than through you. A grounding wire connects the metal enclosure to a safety ground wire in the power cord. That’s why there’s a third prong on a power plug.
+
+The safety ground wire goes through the home’s electrical system and out to Earth, as shown in the leafy photograph above.
+
+The moment a fault happens the dangerous current is guided to Earth and away from people. The high current is sensed by the circuit breaker or fuse, which opens up to remove power from the faulty device. When the device is working properly, no current flows in the safety ground wire.
+
+
+*** Resistive and Reactive circuits
+Resistive circuits have resistors in them.
+Reactive (VAR) circuits have capacitors and inductors in them.
+
+Pure resisitive or reactive only have those components in them, but most circuits in reality have a mix of resistive and reactive.
+
+*** Voltage and Current relationship
+
+What flows is not the voltage but the charge, and that flow is called current. There can be voltage without a current; for instance if you have a single charge, that charge induces a voltage in space, even if it's empty.
+Voltage, in the most physical way, is a scalar field that determines the potential energy per unit charge at every point in space.
+
+Now, you can't have currents without voltages because if there's a current there's a charge moving, and every charge produces a voltage, but you can have currents without voltage differences in space. For example, if you have a charged sphere, and you make it rotate, the charge will be on the surface and by rotating the sphere you will have a current on the surface, but the voltage is the same at every point of the surface. Also magnetization of materials can induce currents by the same way.
+
+Voltage difference is usually what is meant when people say voltage in a circuit, since they are talking between two points in space and the difference between them, so this can be a confusing terminology.
+
+Without voltage, electrons move randomly and fairly evenly within a wire, and current cannot flow. Voltage creates pressure that drives electrons in a single direction. The circuit forms a closed, conducting loop through which electrons can flow, providing energy to any device (a load) connected to the circuit.
+In this sense when people say current, current means the ability to move in a specified direction, but if one defines current as the ability to move (even randomly), then you can have current without voltage, but that's not the usual terminology.
+
+*** Shunt resistor
+A shunt resistor is a type of resistor that is used to measure the current flowing through a circuit. The shunt resistor is placed in series with the circuit, and the voltage across the resistor is measured to determine the current flowing through the circuit.
+

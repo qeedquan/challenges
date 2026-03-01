@@ -1,0 +1,1584 @@
+<?xml version="1.0"?>
+<!DOCTYPE xkcd1688 SYSTEM "xkcd1688.dtd">
+
+
+<xkcd1688>
+  <node id="root">
+    <question>
+      Start here
+    </question>
+    <option target="istanbul">
+      Go
+    </option>
+    <range>
+      <begin year="" />
+      <end year="" />
+    </range>
+  </node>
+  
+  <node id="istanbul">
+    <question>
+      Istanbul or Constantinople?
+    </question>
+    <option target="canada-alaska-tokyo">
+      Constantinople
+    </option>
+    <option target="ottoman-exist">
+      Neither
+    </option>
+    <option target="istanbul-and-soviet">
+      Istanbul
+    </option>
+    <range>
+      <begin year="" />
+      <end year="" />
+    </range>
+  </node>
+
+  <node id="canada-alaska-tokyo">
+    <question>
+      Do any of these exist?
+      Independent Canada?
+      US Territory of Alaska?
+      Tokyo?
+    </question>
+    <option target="holy-roman-empire">
+      No
+    </option>
+    <option target="south-africa">
+      Yes
+    </option>
+    <range>
+      <begin year="" />
+      <end year="1928" />
+    </range>
+  </node>      
+  
+  <node id="holy-roman-empire">
+    <question>
+      The Holy Roman Empire?
+    </question>
+    <option target="hre-yes">
+      Yes
+    </option>
+    <option target="US">
+      No
+    </option>
+    <range>
+      <begin year="" />
+      <end year="1867" />
+    </range>
+  </node>
+
+  <leaf id="hre-yes">
+    1805 or earlier (before this point the modern idea of a
+    complete political map of the world gets hard to apply)
+  </leaf>
+
+  <node id="US">
+    <question>
+      The United States?
+    </question>
+    <option target="no-us">
+      No
+    </option>
+    <option target="texas-is">
+      Yes
+    </option>
+    <range>
+      <begin year="1806" />
+      <end year="1867" />
+    </range>
+  </node>
+
+  <leaf id="no-us">
+    How sure are you that this map is in English?
+  </leaf>
+
+  <node id="texas-is">
+    <question>
+      Texas is...
+    </question>
+    <option target="florida-is">
+      Part of Mexico
+    </option>
+    <option target="texas-independent">
+      Independent
+    </option>
+    <option target="russia-sea-of-japan">
+      Part of the US
+    </option>
+    <range>
+      <begin year="1806" />
+      <end year="1867" />
+    </range>
+  </node>
+
+  <node id="florida-is">
+    <question>
+      Florida is parth of...
+    </question>
+    <option target="paraguay">
+      Spain
+    </option>
+    <option target="venezuela-ecuador">
+      US
+    </option>
+    <range>
+      <begin year="1806" />
+      <end year="1836" />
+    </range>
+  </node>
+
+  <node id="paraguay">
+    <question>
+      Paraguay?
+    </question>
+    <option target="paraguay-no">
+      No
+    </option>
+    <option target="paraguay-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1806" />
+      <end year="1817" />
+    </range>
+  </node>
+
+  <leaf id="paraguay-no">
+    <range>
+      <begin year="1806" />
+      <end year="1810" />
+    </range>
+  </leaf>
+  <leaf id="paraguay-yes">
+    <range>
+      <begin year="1811" />
+      <end year="1817" />
+    </range>
+  </leaf>
+
+  <node id="venezuela-ecuador">
+    <question>
+      Venezuela and/or Ecuador?
+    </question>
+    <option target="venezuela-ecuador-no">
+      No
+    </option>
+    <option target="venezuela-ecuador-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1818" />
+      <end year="1833" />
+    </range>
+  </node>
+
+  <leaf id="venezuela-ecuador-no">
+    <range>
+      <begin year="1818" />
+      <end year="1829" />
+    </range>
+  </leaf>
+  <leaf id="venezuela-ecuador-yes">
+    <range>
+      <begin year="1830" />
+      <end year="1833" />
+    </range>
+  </leaf>
+
+  <leaf id="texas-independent">
+    <range>
+      <begin year="1834" />
+      <end year="1845" />
+    </range>
+  </leaf>
+  
+  <node id="russia-sea-of-japan">
+    <question>
+      Does Russia border the Sea of Japan?
+    </question>
+    <option target="us-southern-border">
+      No
+    </option>
+    <option target="russia-sea-of-japan-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1846" />
+      <end year="1867" />
+    </range>
+  </node>
+
+  <node id="us-southern-border">
+    <question>
+      The USs southern border looks...
+    </question>
+    <option target="us-southern-weird">
+      Weird
+    </option>
+    <option target="us-southern-normal">
+      Normal
+    </option>
+    <range>
+      <begin year="1846" />
+      <end year="1856" />
+    </range>
+  </node>
+
+  <leaf id="russia-sea-of-japan-yes">
+    <range>
+      <begin year="1858" />
+      <end year="1867" />
+    </range>
+  </leaf>
+  <leaf id="us-southern-weird">
+    <range>
+      <begin year="1846" />
+      <end year="1853" />
+    </range>
+  </leaf>
+  <leaf id="us-southern-normal">
+    <range>
+      <begin year="1854" />
+      <end year="1856" />
+    </range>
+  </leaf>
+
+  <node id="south-africa">
+    <question>
+      South Africa?
+    </question>
+    <option target="rhodesia">
+      No
+    </option>
+    <option target="austria-hungary">
+      Yes
+    </option>
+    <range>
+      <begin year="1868" />
+      <end year="1928" />
+    </range>
+  </node>
+
+  <node id="rhodesia">
+    <question>
+      Rhodesia?
+    </question>
+    <option target="bolivia-landlocked">
+      No
+    </option>
+    <option target="norway-in-sweden">
+      Yes
+    </option>
+    <range>
+      <begin year="1868" />
+      <end year="1910" />
+    </range>
+  </node>
+
+  <node id="bolivia-landlocked">
+    <question>
+      Is Bolivia landlocked?
+    </question>
+    <option target="buda-pest-budapest">
+      No
+    </option>
+    <option target="bolivia-is-landlocked">
+      Yes
+    </option>
+    <range>
+      <begin year="1868" />
+      <end year="1895" />
+    </range>
+  </node>
+
+  <leaf id="bolivia-is-landlocked">
+    <range>
+      <begin year="1884" />
+      <end year="1895" />
+    </range>
+  </leaf>
+  
+  <node id="buda-pest-budapest">
+    <question>
+      "Buda" and "Pest" or "Budapest"?
+    </question>
+    <option target="buda-pest">
+      Buda and Pest
+    </option>
+    <option target="budapest">
+      Budapest
+    </option>
+    <range>
+      <begin year="1868" />
+      <end year="1884" />
+    </range>
+  </node>
+  <leaf id="buda-pest">
+    <range>
+      <begin year="1868" />
+      <end year="1872" />
+    </range>
+  </leaf>
+  <leaf id="budapest">
+    <range>
+      <begin year="1873" />
+      <end year="1884" />
+    </range>
+  </leaf>
+
+  <node id="norway-in-sweden">
+    <question>
+      Is Norway part of Sweden?
+    </question>
+    <option target="norway-is-sweden">
+      Yes
+    </option>
+    <option target="norway-not-sweden">
+      No
+    </option>
+    <range>
+      <begin year="1895" />
+      <end year="1910" />
+    </range>
+  </node>
+  <leaf id="norway-is-sweden">
+    <range>
+      <begin year="1895" />
+      <end year="1905" />
+    </range>
+  </leaf>
+  <leaf id="norway-not-sweden">
+    <range>
+      <begin year="1906" />
+      <end year="1910" />
+    </range>
+  </leaf>
+
+  <node id="austria-hungary">
+    <question>
+      Austria-Hungary?
+    </question>
+    <option target="albania">
+      Yes
+    </option>
+    <option target="leningrad">
+      No
+    </option>
+    <range>
+      <begin year="1910" />
+      <end year="1928" />
+    </range>
+  </node>
+
+  <node id="albania">
+    <question>
+      Albania?
+    </question>
+    <option target="albania-no">
+      No
+    </option>
+    <option target="albania-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1910" />
+      <end year="1918" />
+    </range>
+  </node>
+  <leaf id="albania-no">
+    <range>
+      <begin year="1910" />
+      <end year="1912" />
+    </range>
+  </leaf>
+  <leaf id="albania-yes">
+    <range>
+      <begin year="1913" />
+      <end year="1918" />
+    </range>
+  </leaf>
+
+
+
+  <node id="leningrad">
+    <question>
+      Leningrad?
+    </question>
+    <option target="leningrad-no">
+      No
+    </option>
+    <option target="leningrad-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1918" />
+      <end year="1928" />
+    </range>
+  </node>
+  <leaf id="leningrad-no">
+    <range>
+      <begin year="1918" />
+      <end year="1923" />
+    </range>
+  </leaf>
+  <leaf id="leningrad-yes">
+    <range>
+      <begin year="1924" />
+      <end year="1929" />
+    </range>
+  </leaf>
+
+
+  <node id="istanbul-and-soviet">
+    <question>
+      Does the Soviet Union exist?
+    </question>
+    <option target="west-africa-french">
+      Yes
+    </option>
+    <option target="zaire-hongkonguk">
+      No
+    </option>
+    <range>
+      <begin year="1928" />
+      <end year="" />
+    </range>
+  </node>
+
+  <node id="west-africa-french">
+    <question>
+      Is most of West Africa a giant French blob?
+    </question>
+    <option target="pakistan">
+      Yes
+    </option>
+    <option target="how-many-vietnam">
+      No
+    </option>
+    <range>
+      <begin year="1928" />
+      <end year="1991" />
+    </range>
+  </node>
+
+  <node id="pakistan">
+    <question>
+      Pakistan?
+    </question>
+    <option target="how-many-germany">
+      No
+    </option>
+    <option target="cambodia">
+      Yes
+    </option>
+    <range>
+      <begin year="1928" />
+      <end year="1960" />
+    </range>
+  </node>
+
+  <node id="how-many-germany">
+    <question>
+      How many Germanys are there?
+    </question>
+    <option target="persia-iran">
+      One
+    </option>
+    <option target="one-large-germany">
+      One, but it's [i]huge[/i].
+    </option>
+    <option target="two-germany">
+      Two
+    </option>
+    <range>
+      <begin year="1928" />
+      <end year="1947" />
+    </range>
+  </node>
+  <leaf id="one-large-germany">
+    <range>
+      <begin year="1941" />
+      <end year="1945" />
+    </range>
+  </leaf>
+  <leaf id="two-germany">
+    <range>
+      <begin year="1946" />
+      <end year="1947" />
+    </range>
+  </leaf>
+
+  <node id="persia-iran">
+    <question>
+      Persia or Iran?
+    </question>
+    <option target="persia">
+      Persia
+    </option>
+    <option target="iran">
+      Iran
+    </option>
+    <range>
+      <begin year="1928" />
+      <end year="1940" />
+    </range>
+  </node>
+
+  <leaf id="persia">
+    <range>
+      <begin year="1930" />
+      <end year="1934" />
+    </range>
+  </leaf>
+  <leaf id="iran">
+    <range>
+      <begin year="1935" />
+      <end year="1940" />
+    </range>
+  </leaf>
+
+  <node id="cambodia">
+    <question>
+      Cambodia?
+    </question>
+    <option target="eritrea-in">
+      No
+    </option>
+    <option target="uae">
+      Yes
+    </option>
+    <range>
+      <begin year="1948" />
+      <end year="1960" />
+    </range>
+  </node>
+
+  <node id="eritrea-in">
+    <question>
+      Eritrea is part of...
+    </question>
+    <option target="canada-is">
+      Italy
+    </option>
+    <option target="eritrea-in-ethiopia">
+      Ethiopia
+    </option>
+    <range>
+      <begin year="1948" />
+      <end year="1953" />
+    </range>
+  </node>
+  <leaf id="eritrea-in-ethiopia">
+    <range>
+      <begin year="1952" />
+      <end year="1953" />
+    </range>
+  </leaf>
+
+  <node id="canada-is">
+    <question>
+      Canada is...
+    </question>
+    <option target="canada-missing">
+      Missing a piece
+    </option>
+    <option target="canada-ok">
+      Fine
+    </option>
+    <range>
+      <begin year="1948" />
+      <end year="1952" />
+    </range>
+  </node>
+  <leaf id="canada-missing">
+    <range>
+      <begin year="1948" />
+      <end year="1949" />
+    </range>
+  </leaf>
+  <leaf id="canada-ok">
+    <range>
+      <begin year="1949" />
+      <end year="1952" />
+    </range>
+  </leaf>
+
+  <node id="uae">
+    <question>
+      The United Arab Republic?
+    </question>
+    <option target="uae-no">
+      No
+    </option>
+    <option target="uae-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1954" />
+      <end year="1960" />
+    </range>
+  </node>
+  <leaf id="uae-no">
+    <range>
+      <begin year="1954" />
+      <end year="1957" />
+    </range>
+  </leaf>
+  <leaf id="uae-yes">
+    <range>
+      <begin year="1958" />
+      <end year="1960" />
+    </range>
+  </leaf>
+
+  <node id="how-many-vietnam">
+    <question>
+      How many Vietnams are there?
+    </question>
+    <option target="bangladesh">
+      Two
+    </option>
+    <option target="jimmy-carter">
+      One
+    </option>
+    <range>
+      <begin year="1960" />
+      <end year="1991" />
+    </range>
+  </node>
+
+  <node id="bangladesh">
+    <question>
+      Bangladesh?
+    </question>
+    <option target="lake-victoria">
+      No
+    </option>
+    <option target="bangladesh-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1960" />
+      <end year="1975" />
+    </range>
+  </node>
+  <leaf id="bangladesh-yes">
+    <range>
+      <begin year="1972" />
+      <end year="1975" />
+    </range>
+  </leaf>
+  
+  <node id="lake-victoria">
+    <question>
+      Is the area south of Lake Victoria...
+    </question>
+    <option target="I-25">
+      British
+    </option>
+    <option target="tanganyika">
+      Tanganyika
+    </option>
+    <option target="tanzania">
+      Tanzania
+    </option>
+    <range>
+      <begin year="1960" />
+      <end year="1971" />
+    </range>
+  </node>
+  <leaf id="tanganyika">
+    <range>
+      <begin year="1961" />
+      <end year="1964" />
+    </range>
+  </leaf>
+  <leaf id="tanzania">
+    <range>
+      <begin year="1965" />
+      <end year="1971" />
+    </range>
+  </leaf>
+
+  <node id="I-25">
+    <question>
+      The town on I-25 between Albuquerque and El Paso is...
+    </question>
+    <option target="hot-springs">
+      Hot Springs
+    </option>
+    <option target="truth-or-consequences">
+      Truth or Consequences
+    </option>
+    <range>
+      <begin year="1948" />
+      <end year="1952" />
+    </range>
+  </node>
+  <leaf id="hot-springs">
+    <range>
+      <begin year="1948" />
+      <end year="1949" />
+    </range>
+  </leaf>
+  <leaf id="truth-or-consequences">
+    <range>
+      <begin year="1950" />
+      <end year="1952" />
+    </range>
+  </leaf>
+
+  <node id="jimmy-carter">
+    <question>
+      Jimmy Carter is...
+    </question>
+    <option target="swamp-rabbit">
+      Being attacked by a giant swimming rabbit
+    </option>
+    <option target="sinai">
+      Fine
+    </option>
+    <range>
+      <begin year="1975" />
+      <end year="1991" />
+    </range>
+  </node>
+  <leaf id="swamp-rabbit">
+      April 20 1979
+    <range>
+      <begin year="1979" />
+      <end year="1980" />
+    </range>
+  </leaf>
+
+  <node id="sinai">
+    <question>
+      The Sinai is part of what country?
+    </question>
+    <option target="sinai-israel">
+      Israel
+    </option>
+    <option target="sinai-mostly-israel">
+      Mostly Israel
+    </option>
+    <option target="sinai-mostly-egypt">
+      Mostly Egypt
+    </option>
+    <option target="micronesia">
+      Egypt
+    </option>
+    <range>
+      <begin year="1975" />
+      <end year="1991" />
+    </range>
+  </node>
+  <leaf id="sinai-israel">
+    <range>
+      <begin year="1976" />
+      <end year="1979" />
+    </range>
+  </leaf>
+  <leaf id="sinai-mostly-israel">
+    <range>
+      <begin year="1980" />
+      <end year="1981" />
+    </range>
+  </leaf>
+  <leaf id="sinai-mostly-egypt">
+    <range>
+      <begin year="1981" />
+      <end year="1982" />
+    </range>
+  </leaf>
+
+  <node id="micronesia">
+    <question>
+      What's the capital of Micronesia?
+    </question>
+    <option target="upper-volta-burkina-faso">
+      Kolonia
+    </option>
+    <option target="yemen-germany">
+      Palikir
+    </option>
+    <range>
+      <begin year="1982" />
+      <end year="1991" />
+    </range>
+  </node>
+
+  <node id="upper-volta-burkina-faso">
+    <question>
+      Republic of the Upper Volta or Burkina Faso?
+    </question>
+    <option target="upper-volta">
+      Upper Volta
+    </option>
+    <option target="burkina-faso">
+      Burkina Faso
+    </option>
+    <range>
+      <begin year="1982" />
+      <end year="1988" />
+    </range>
+  </node>
+  <leaf id="upper-volta">
+    <range>
+      <begin year="1982" />
+      <end year="1984" />
+    </range>
+  </leaf>
+  <leaf id="burkina-faso">
+    <range>
+      <begin year="1985" />
+      <end year="1988" />
+    </range>
+  </leaf>
+ 
+  <node id="yemen-germany">
+    <question>
+      (Number of Yemens) + (Number of Germanys) = ?
+    </question>
+    <option target="yemen-germany-four">
+      Four
+    </option>
+    <option target="yemen-germany-three">
+      Three
+    </option>
+    <option target="yemen-germany-two">
+      Two
+    </option>
+    <range>
+      <begin year="1989" />
+      <end year="1991" />
+    </range>
+  </node>
+  <leaf id="yemen-germany-four">
+    <range>
+      <begin year="1989" />
+      <end year="1990" />
+    </range>
+  </leaf>
+  <leaf id="yemen-germany-three">
+      Mid-1990
+    <range>
+      <begin year="1990" />
+      <end year="1991" />
+    </range>
+  </leaf>
+  <leaf id="yemen-germany-two">
+    <range>
+      <begin year="1990" />
+      <end year="1991" />
+    </range>
+  </leaf>
+  
+  <node id="zaire-hongkonguk">
+    <question>
+      Zaire? or: "Hong Kong (UK)"?
+    </question>
+    <option target="zaire-hk-uk">
+      Yes
+    </option>
+    <option target="serbia-montenegro">
+      No
+    </option>
+    <range>
+      <begin year="1991" />
+      <end year="" />
+    </range>
+  </node>
+  <leaf id="zaire-hk-uk">
+    <range>
+      <begin year="1992" />
+      <end year="1996" />
+    </range>
+  </leaf>
+
+  <node id="serbia-montenegro">
+    <question>
+      Serbia and Montenegro are...
+    </question>
+    <option target="east-timor">
+      One country
+    </option>
+    <option target="sudan">
+      Two countries
+    </option>
+    <range>
+      <begin year="1996" />
+      <end year="" />
+    </range>
+  </node>
+
+  <node id="east-timor">
+    <question>
+      East Timor?
+    </question>
+    <option target="no-east-timor">
+      No
+    </option>
+    <option target="yes-east-timor">
+      Yes
+    </option>
+    <range>
+      <begin year="1996" />
+      <end year="2006" />
+    </range>
+  </node>
+  <leaf id="no-east-timor">
+    <range>
+      <begin year="1997" />
+      <end year="2001" />
+    </range>
+  </leaf>
+  <leaf id="yes-east-timor">
+    <range>
+      <begin year="2002" />
+      <end year="2006" />
+    </range>
+  </leaf>
+
+  
+  <node id="sudan">
+    <question>
+      How many Sudans are there?
+    </question>
+    <option target="one-sudan">
+      One
+    </option>
+    <option target="crimea">
+      Two
+    </option>
+    <range>
+      <begin year="2007" />
+      <end year="" />
+    </range>
+  </node>
+  <leaf id="one-sudan">
+    <range>
+      <begin year="2007" />
+      <end year="2011" />
+    </range>
+  </leaf>
+
+  <node id="crimea">
+    <question>
+      Is Crimea disputed?
+    </question>
+    <option target="colorado-rez">
+      No
+    </option>
+    <option target="crimea-ukrainian">
+      Yes
+    </option>
+    <range>
+      <begin year="2011" />
+      <end year="" />
+    </range>
+  </node>
+  <leaf id="crimea-ukrainian">
+    <range>
+      <begin year="2012" />
+      <end year="2013" />
+    </range>
+  </leaf>
+
+  <node id="colorado-rez">
+    <question>
+      "Colorado" or "Danger - Radioactive Exclusion Zone - Avoid" ?
+    </question>
+    <option target="colorado">
+      Colorado
+    </option>
+    <option target="rez-spiders">
+      Danger - Radioactive Exclusion Zone - Avoid
+    </option>
+    <range>
+      <begin year="2014" />
+      <end year="" />
+    </range>
+  </node>
+  <leaf id="colorado">
+    <range>
+      <begin year="2014" />
+      <end year="2021" />
+    </range>
+  </leaf>
+
+  <node id="rez-spiders">
+    <question>
+      Does the warning mention the spiders?
+    </question>
+    <option target="rez">
+      No
+    </option>
+    <option target="spiders">
+      Yes
+    </option>
+    <range>
+      <begin year="2022" />
+      <end year="" />
+    </range>
+  </node>
+  <leaf id="rez">
+    <range>
+      <begin year="2023" />
+      <end year="2022" />
+    </range>
+  </leaf>
+  <leaf id="spiders">
+    <range>
+      <begin year="2023" />
+      <end year="" />
+    </range>
+  </leaf>
+
+
+  
+    
+  <node id="ottoman-exist">
+    <question>
+      Does the Ottoman empire exist?
+    </question>
+    <option target="canada-alaska-tokyo">
+      Yes
+    </option>
+    <option target="neither-soviet">
+      No
+    </option>
+    <range>
+      <begin year="" />
+      <end year="" />
+    </range>
+  </node>
+
+  <node id="neither-soviet">
+    <question>
+      The Soviet Union?
+    </question>
+    <option target="saudi-arabia">
+      Yes
+    </option>
+    <option target="north-korea">
+      No
+    </option>
+    <range>
+      <begin year="1922" />
+      <end year="" />
+    </range>
+  </node>
+
+  <node id="saudi-arabia">
+    <question>
+      Saudi Arabia?
+    </question>
+    <option target="no-saudi-arabia">
+      No
+    </option>
+    <option target="west-africa-french">
+      Yes
+    </option>
+    <range>
+      <begin year="1922" />
+      <end year="1991" />
+    </range>
+  </node>
+  <leaf id="no-saudi-arabia">
+    <range>
+      <begin year="1922" />
+      <end year="1932" />
+    </range>
+  </leaf>
+
+  <node id="north-korea">
+    <question>
+      North Korea?
+    </question>
+    <option target="zaire-hongkonguk">
+      Yes
+    </option>
+    <option target="saint-trimble">
+      No
+    </option>
+    <range>
+      <begin year="1922" />
+      <end year="1923" />
+    </range>
+    <range>
+      <begin year="1991" />
+      <end year="" />
+    </range>
+  </node>
+  
+  <node id="saint-trimble">
+    <question>
+      Saint Trimble's Island?
+    </question>
+    <option target="jan-mayen">
+      No
+    </option>
+    <option target="saint-trimble-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1922" />
+      <end year="1923" />
+    </range>
+  </node>
+  <leaf id="saint-trimble-yes">
+    No, I made that one up.
+  </leaf>
+  
+  <node id="jan-mayen">
+    <question>
+      Is Jan Mayen part of the Kingdom of Norway?
+    </question>
+    <option target="canada-alaska-tokyo">
+      Not yet
+    </option>
+    <option target="familiar-continents">
+      What?
+    </option>
+    <option target="pakistan">
+      Yes
+    </option>
+    <range>
+      <begin year="1922" />
+      <end year="1923" />
+    </range>
+  </node>
+
+  <node id="familiar-continents">
+    <question>
+      Can you see the familiar continents?
+    </question>
+    <option target="sirion-anduin">
+      No
+    </option>
+    <option target="earth">
+      Yes
+    </option>
+    <range>
+      <begin year="" />
+      <end year="" />
+    </range>
+  </node>
+
+  <node id="earth">
+    <question>
+      This sounds like a physical map or satellite photo.
+    </question>
+    <option target="lake-chad">
+      Yes, that's it.
+    </option>
+    <range>
+      <begin year="" />
+      <end year="" />
+    </range>
+  </node>
+
+  <node id="lake-chad">
+    <question>
+      Is Lake Chad missing?
+    </question>
+    <option target="american-prairies">
+      No
+    </option>
+    <option target="aral-sea">
+      Yes
+    </option>
+    <range>
+      <begin year="" />
+      <end year="" />
+    </range>
+  </node>
+
+  <node id="american-prairies">
+    <question>
+      How far east do the American prairies reach?
+    </question>
+    <option target="prairie-indiana">
+      Indiana
+    </option>
+    <option target="prairie-mississippi">
+      The Mississippi
+    </option>
+    <option target="salton-sea">
+      Nebraska
+    </option>
+    <option target="lake-volta">
+      What prairies?
+    </option>
+    <range>
+      <begin year="" />
+      <end year="1970" />
+    </range>
+  </node>
+  <leaf id="prairie-indiana">
+    <range>
+      <begin year="" />
+      <end year="1830" />
+    </range>
+  </leaf>
+  <leaf id="prairie-mississippi">
+    <range>
+      <begin year="1830" />
+      <end year="1880" />
+    </range>
+  </leaf>
+
+  <node id="salton-sea">
+    <question>
+      Is there a big lake in the middle of Southern California?
+      (created by mistake)
+    </question>
+    <option target="salton-sea-no">
+      No
+    </option>
+    <option target="salton-sea-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1860" />
+      <end year="1910" />
+    </range>
+  </node>
+  <leaf id="salton-sea-no">
+    <range>
+      <begin year="1860" />
+      <end year="1905" />
+    </range>
+  </leaf>
+  <leaf id="salton-sea-yes">
+    <range>
+      <begin year="1905" />
+      <end year="1910" />
+    </range>
+  </leaf>
+
+  <node id="lake-volta">
+    <question>
+      Is there a big lake in the middle of Ghana? (created on purpose)
+    </question>
+    <option target="lake-volta-no">
+      No
+    </option>
+    <option target="lake-volta-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1920" />
+      <end year="1970" />
+    </range>
+  </node>
+  <leaf id="lake-volta-no">
+    <range>
+      <begin year="1920" />
+      <end year="1960" />
+    </range>
+  </leaf>
+  <leaf id="lake-volta-yes">
+    <range>
+      <begin year="1960" />
+      <end year="1970" />
+    </range>
+  </leaf>
+  
+  <node id="aral-sea">
+    <question>
+      Is the Aral sea missing?
+    </question>
+    <option target="aral-sea-yes">
+      No
+    </option>
+    <option target="aral-sea-no">
+      Yes
+    </option>
+    <range>
+      <begin year="1970" />
+      <end year="" />
+    </range>
+  </node>
+  <leaf id="aral-sea-yes">
+    <range>
+      <begin year="1970" />
+      <end year="2000" />
+    </range>
+  </leaf>
+  <leaf id="aral-sea-no">
+    <range>
+      <begin year="2000" />
+      <end year="" />
+    </range>
+  </leaf>
+
+  <node id="sirion-anduin">
+    <question>
+      Rivers "Sirion" or "Anduin"?
+    </question>
+    <option target="cair-paravel">
+      No
+    </option>
+    <option target="mordor">
+      Yes
+    </option>
+  </node>
+
+  <node id="mordor">
+    <question>
+      Mordor?
+    </question>
+    <option target="beleriand">
+      No
+    </option>
+    <option target="numenor">
+      Yes
+    </option>
+  </node>
+
+  <node id="beleriand">
+    <question>
+      Beleriand?
+    </question>
+    <option target="beleriand-no">
+      No
+    </option>
+    <option target="beleriand-yes">
+      Yes
+    </option>
+  </node>
+  <leaf id="beleriand-no">
+    583 (Years of the Sun, First Age) to ca. 1000 (Second Age)
+  </leaf>
+  <leaf id="beleriand-yes">
+    before 583 (Years of the Sun, First Age)
+  </leaf>
+
+  <node id="numenor">
+    <question>
+      Númenor?
+    </question>
+    <option target="numenor-yes">
+      No
+    </option>
+    <option target="mirkwood">
+      Yes
+    </option>
+  </node>
+  <leaf id="numenor-yes">
+    ca 1000 (Second Age) to 3319 (Second Age)
+  </leaf>
+  
+  <node id="mirkwood">
+    <question>
+      The forest east of the Misty Mountains is...
+    </question>
+    <option target="greenwood">
+      Greenwood the Great
+    </option>
+    <option target="mirkwood">
+      Mirkwood
+    </option>
+    <option target="green-leaves">
+      The Wood of Greenleaves
+    </option>
+  </node>
+  <leaf id="greenwood">
+    3319 (Second Age) to 1050 (Third Age)
+  </leaf>
+  <leaf id="mirkwood">
+    1050 - 3019-03-28 (Third Age)
+  </leaf>
+  <leaf id="green-leaves">
+    3019-03-28 or later (Fourth Age)
+  </leaf>
+
+  <node id="cair-paravel">
+    <question>
+      Cair Paravel?
+    </question>
+    <option target="mossflower">
+      No
+    </option>
+    <option target="calormen">
+      Yes
+    </option>
+  </node>
+
+  <node id="calormen">
+    <question>
+      Calormen?
+    </question>
+    <option target="lotta">
+      No
+    </option>
+    <option target="recursive">
+      Yes
+    </option>
+  </node>
+
+  <node id="lotta">
+    <question>
+      Lotta islands?
+    </question>
+    <option target="beruna">
+      No
+    </option>
+    <option target="lotta-islands">
+      Yes
+    </option>
+  </node>
+  <leaf id="lotta-islands">
+    The Voyage of the Dawn Treader
+  </leaf>
+
+  <node id="beruna">
+    <question>
+      Beruna ...
+    </question>
+    <option target="beruna-ford">
+      Ford
+    </option>
+    <option target="beruna-bridge">
+      Bridge
+    </option>
+  </node>
+  <leaf id="beruna-ford">
+    The Lion, The Witch and The Wardrobe
+  </leaf>
+  <leaf id="beruna-bridge">
+    Prince Caspian
+  </leaf>
+
+  <node id="recursive">
+    <question>
+      Weird recursive heaven?
+    </question>
+    <option target="no-recursive">
+      No
+    </option>
+    <option target="yes-recursive">
+      Yes
+    </option>
+  </node>
+  <leaf id="no-recursive">
+    The Silver Chair [br /]
+    The Horse and His Boy [br /]
+    The Magician's Nephew
+  </leaf>
+  <leaf id="yes-recursive">
+    The Last Battle
+  </leaf>
+
+  <node id="mossflower">
+    <question>
+      Mossflower?
+    </question>
+    <option target="turtle">
+      No
+    </option>
+    <option target="redwall">
+      Yes
+    </option>
+  </node>
+  <leaf id="redwall">
+    Redwall
+  </leaf>
+
+  <node id="turtle">
+    <question>
+      Is the world on the back of a turtle?
+    </question>
+    <option target="sure-map">
+      No
+    </option>
+    <option target="discworld">
+      Yes
+    </option>
+  </node>
+  <leaf id="discworld">
+    Discworld
+  </leaf>
+
+  <node id="sure-map">
+    <question>
+      Are you [i]sure[/i] this is a map?
+    </question>
+    <option target="bite">
+      No
+    </option>
+    <option target="yourself">
+      Yes
+    </option>
+  </node>
+
+  <node id="yourself">
+    <question>
+      Did you make it yourself?
+    </question>
+    <option target="homemade">
+      Yes
+    </option>
+  </node>
+  <leaf id="homemade">
+    It's very nice.
+  </leaf>
+
+  <node id="bite">
+    <question>
+      Is it trying to bite you?
+    </question>
+    <option target="breadbox">
+      No
+    </option>
+    <option target="let-go">
+      Yes
+    </option>
+  </node>
+
+  <node id="breadbox">
+    <question>
+      Is it larger than a breadbox?
+    </question>
+    <option target="tuba">
+      Yes
+    </option>
+    <option target="stapler">
+      No
+    </option>
+    <option target="yes-breadbox">
+      About the same
+    </option>
+  </node>
+  <leaf id="tuba">
+    Tuba
+  </leaf>
+  <leaf id="stapler">
+    Stapler
+  </leaf>
+  <leaf id="yes-breadbox">
+    Breadbox
+  </leaf>
+
+  <node id="let-go">
+    <question>
+      If you let it go, what does it do?
+    </question>
+    <option target="cat">
+      Hisses and runs away.
+    </option>
+    <option target="seagull">
+      Screeches and flaps around the room breaking things.
+    </option>
+  </node>
+  <leaf id="cat">
+    Cat
+  </leaf>
+  <leaf id="seagull">
+    Seagull
+  </leaf>
+</xkcd1688>

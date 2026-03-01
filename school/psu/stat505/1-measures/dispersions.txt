@@ -1,0 +1,68 @@
+*** Variance
+Variance is a measure of the variability or spread in a set of data. Mathematically, it is the average squared deviation from the mean score. We use the following formula to compute population variance.
+
+Var(X) = Σ ( Xi - X )^2 / N = Σ xi^2 / N
+
+where
+
+N is the number of scores in a set of scores
+X is the mean of the N scores.
+Xi is the ith raw score in the set of scores
+xi is the ith deviation score in the set of scores
+Var(X) is the variance of all the scores in the set
+
+*** Covariance
+Covariance is a measure of the extent to which corresponding elements from two sets of ordered data move in the same direction. We use the following formula to compute population covariance.
+
+Cov(X, Y) = Σ ( Xi - X ) ( Yi - Y ) / N = Σ xiyi / N
+
+where
+
+N is the number of scores in each set of data
+X is the mean of the N scores in the first dataset
+Xi is the ithe raw score in the first set of scores
+xi is the ith deviation score in the first set of scores
+Y is the mean of the N scores in the second dataset
+Yi is the ithe raw score in the second set of scores
+yi is the ith deviation score in the second set of scores
+Cov(X, Y) is the covariance of corresponding scores in the two sets of data
+
+Variance-Covariance Matrix
+Variance and covariance are often displayed together in a variance-covariance matrix, (aka, a covariance matrix). The variances appear along the diagonal and covariances appear in the off-diagonal elements, as shown below.
+
+
+V =
+Σ x12 / N    	Σ x1 x2 / N    	. . .    	Σ x1 xc / N
+Σ x2 x1 / N    	Σ x22 / N    	. . .    	Σ x2 xc / N
+. . .    	. . .    	. . .    	. . .
+Σ xc x1 / N    	Σ xc x2 / N    	. . .    	Σ xc2 / N
+where
+
+V is a c x c variance-covariance matrix
+N is the number of scores in each of the c datasets
+xi is a deviation score from the ith dataset
+Σ xi2 / N is the variance of elements from the ith dataset
+Σ xi xj / N is the covariance for elements from the ith and jth datasets
+
+*** Total Variation of a Random Vector
+The total variation, therefore, of a random vector is simply the trace of the population variance-covariance matrix.
+Thus, the total variation is equal to the sum of the population variances.
+The total variation is of interest for principal components analysis and factor analysis
+Let us use the data from the USDA women’s health survey again to illustrate this. We have taken the variances for each of the variables from the software output and have placed them in the table below.
+
+Variable	Variance
+Calcium	157829.4
+Iron	35.8
+Protein	934.9
+Vitamin A	2668452.4
+Vitamin C	5416.3
+Total	2832668.8
+
+The total variation for the nutrient intake data is determined by simply adding up all of the variances for each of the individual variables. The total variation equals 2,832,668.8. This is a very large number.
+
+Note! The problem with total variation is that it does not take into account correlations among the variables.
+
+To take into account the correlations among pairs of variables an alternative measure of overall variance is suggested. This measure takes a large value when the various variables show very little correlation among themselves. In contrast, this measure takes a small value if the variables show a very strong correlation among themselves, either positive or negative. This particular measure of dispersion is the generalized variance. In order to define the generalized variance, we first define the determinant of the matrix.
+
+By definition, the generalized variance of a random vector X is equal to the determinant of the Variance/Covariance Matrix
+

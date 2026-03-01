@@ -1,0 +1,28 @@
+Counting
+A bag contains 4 marbles, each one a different color: red, blue, yellow, and green. If you draw two marbles from the bag without replacement, how many possible combinations are there?
+4 choose 2 = 6
+A: 6
+
+Law of SAMEness
+What does x= to in the below equation.
+3^(3*x + 1) = 9^(2*x - 5)
+A: x=11
+
+Proportional Thinking
+Convert 36 inches per second into feet per hour.
+36*60*60 = 129600 inches per hour
+129600/12 = 10800
+A: 10800
+
+Quantity and Denomination
+Use f(x) = x + 5 and g(x) = 3x - 2 to evaluate the following.
+f(g(x))
+
+3x - 2 + 5 = 3x + 3
+A: 3x + 3
+
+Wholes and Parts
+For your land line phone service monthly bill, you pay 3¢ for each minute you use plus a $10 monthly charge. You budget yourself to spend no more than $40 on your phone bill. What is the range of minutes you can use this month?
+40 - 10 = 30 / 0.03 = 1000
+A: 0 <= m <= 1000
+

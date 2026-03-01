@@ -1,0 +1,9 @@
+Q: Qualitatively compare the voltage and current for each of the three light bulbs in this circuit (assume the three light bulbs are absolutely identical):
+
+A: The voltage dropped across each of the lights bulbs is guaranteed to be equal. The current through each of the light bulbs, in this particular case (with identical bulbs), happens to be equal.
+
+Notes:
+Here, the important principles of voltage and current in a parallel circuit are highlighted. This question serves to further define, in practical ways, what the term “parallel” really means.
+
+An important lesson of this question is the distinction between measurements which are guaranteed to be equal versus measurements which just happen to be equal for a given selection of components.
+

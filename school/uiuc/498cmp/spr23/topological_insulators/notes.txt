@@ -1,0 +1,35 @@
+*** Lattices
+
+Solids consist of atoms arranged in a periodic way. So to understand solids we need to start by understanding periodic arangements.
+
+Simplest thing to model is obviously Hydrogen atoms in a 1D lattice:
+Hydrogen Chain: all the hydrogen atoms are the same distance apart.
+Distorted Hydrogen Chain: the hydrogen atoms have distorted themselves so they are in pairs. This is called a Pierls Distortion and is a common thing for a 1d chain of atoms to do.
+
+In a hydrogen chain, the unit distance apart is 1 angstrom.
+In a distorted hydrogen chain, a unit cell can contain multiple hydrogens (meaning the distance between hydrogen pairs can be less or more than 1 angstrom)
+
+They are treated as translationally invariant (both normal/distorted chains), meaning if we shift a left or right (assuming periodic boundaries), they represent the same system
+
+Formally, the description of the model is as follows:
+1. In a real solid, we should think of it essentially being infinitely long. Our computers don’t like to hold an infinite amount of information.
+   To best emulate this what we do is use periodic boundary conditions. Assume we want to only hold six atoms. Then we say that atom 6 is actually adjacent to atom 1.
+
+2. We see that there is a chunk of the material that can be translated by a1 and you get back the same system.
+   We call that chunk of material the unit cell and a1 the lattice vector.
+   In the Hydrogen chain we see that the unit cell contains one Hydrogen atom and that a1=1 unit in the x direction.
+   In the distorted Hydrogen chain we see that the unit cell contains two Hydrogen atoms and that a1=2 units in the x direction.
+
+3. The center of all our unit cells are at m*a1 where m is an integer between 0 and N (the number of unit cells). This defines our real-space lattice.
+
+Labeling our lattice sites: Now, we might want to label our hydrogen atoms.
+We could label them by their position (i.e. the Hydrogen atom at spot 2.8) but that turns out to be less convenient then labeling them by (unit cell, atom number).
+Then we can talk about the Hydrogen atom labelled (3,b) which is the “b” Hydrogen atom in the 3rd unit cell.
+
+*** Momentum Space
+We have a real space lattice of unit cells each of which contain some number of types of atoms. We can also have a momentum space lattice (called the reciprocal lattice)
+again each of which contains some number of types of atoms (so 2 in the distorted Hydrogen lattice)
+
+The reciprocal lattice is defined (in 1d) as m*b i where 0≤m<N is an integer where N is the number of unit cells and b1=2π/(N*|a1|) (the key property that b must obey is that b1*Na1=2π).
+We will have a list of labels that consist of (m, atom type).
+

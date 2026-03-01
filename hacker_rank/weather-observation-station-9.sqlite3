@@ -1,0 +1,35 @@
+/*
+
+Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
+
+Input Format
+
+The STATION table is described as follows:
+
+Input Format
+
+The STATION table is described as follows:
+
+STATION
+FIELD   TYPE
+ID      NUMBER
+CITY    VARCHAR2(21)
+STATE   VARCHAR2(2)
+LAT_N   NUMBER
+LONG_W  NUMBER
+
+where LAT_N is the northern latitude and LONG_W is the western longitude.
+
+*/
+
+Create table If Not Exists STATION (id number, city varchar2(21), state varchar2(2), lat_n number, long_w number);
+insert into STATION (id, city, state, lat_n, long_w) values (1, 'ADEFA', 'KABALA', 1, 2);
+insert into STATION (id, city, state, lat_n, long_w) values (2, 'OBCE', 'XAXO', 5, 3);
+insert into STATION (id, city, state, lat_n, long_w) values (3, 'IQRSI', 'XAXO', 5, 3);
+insert into STATION (id, city, state, lat_n, long_w) values (4, 'UXYO', 'XAXO', 5, 3);
+insert into STATION (id, city, state, lat_n, long_w) values (5, 'EXYU', 'XAXO', 5, 3);
+insert into STATION (id, city, state, lat_n, long_w) values (6, 'ZXYH', 'XAXO', 5, 3);
+insert into STATION (id, city, state, lat_n, long_w) values (7, 'XEIOX', 'AEIOU', 5, 3);
+insert into STATION (id, city, state, lat_n, long_w) values (8, 'ABC', 'DEF', 5, 3);
+select distinct city from station where city not like 'a%' and city not like 'e%' and city not like 'i%' and city not like 'o%' and city not like 'u%';
+

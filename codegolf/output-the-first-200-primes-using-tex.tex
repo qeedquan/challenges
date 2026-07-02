@@ -1,0 +1,43 @@
+\iffalse
+
+Write a plain TeX program that lists the first two hundred primes (in base-10 notation). Including external files/resources is not permitted. The output may be to the terminal, the log file, or the actual dvi/pdf file, at your option, but should be easily readable to a human; in particular, there must be some delimiter (comma, space, newline,...) between consecutive primes. e-TeX and pdfTeX primitives are permitted. See this answer for a starting place.
+
+Hard-coding the result is permitted, although I do not expect such an answer to win.
+
+The answer with the lowest byte count wins.
+
+\fi
+
+% https://tex.stackexchange.com/questions/134305/how-to-produce-a-list-of-prime-numbers-in-latex
+
+\documentclass{article}
+
+\makeatletter
+\def\primes#1#2
+{{
+	\def\comma{\def\comma{, }}
+	\count@\@ne\@tempcntb#2\relax\@curtab#1\relax
+	\@primes
+}}
+
+\def\@primes
+{
+	\loop\advance\count@\@ne
+	\expandafter\ifx\csname p-\the\count@\endcsname\relax
+	\ifnum\@tempcntb<\count@
+	\else
+	\ifnum\count@<\@curtab
+	\else\comma\the\count@\fi\fi\else\repeat
+	\@tempcnta\count@\loop\advance\@tempcnta\count@
+	\expandafter\let\csname p-\the\@tempcnta\endcsname\@ne
+	\ifnum\@tempcnta<\@tempcntb\repeat
+	\ifnum\@tempcntb>\count@\expandafter\@primes\fi
+}
+\makeatother   
+
+%
+\begin{document}
+
+\primes{1}{1225}
+
+\end{document}

@@ -1,0 +1,114 @@
+*** Capacitor
+
+Power supply filter
+AC -> Rectifier -> Place a capacitor in parallel at the rectifier output. This filters (smooth) the output
+
+Voltage spike removal
+A digital logic circuits can cause voltage spikes because of switching between high/low logic.
+A capacitor placed in parallel with the connection can remove spikes.
+
+AC-DC selective filter
+Often an electrical signal has a DC offset. An example is a lightwave communication system.
+When dark it has one offset, and during light it has another offset.
+A capacitor coupled with some circuit elements can remove the DC offset.
+
+*** RC circuit
+
+Integrator
+AC Signal/Square wave -> resistor in series -> output
+                                 |
+			            capacitor in parallel
+
+This outputs a sawtooth for a square wave.
+In general, the higher frequency of the input, the lower amplitude output it gets through the RC circuit.
+It is easy to make an amplifier that ignores waves less than a desired amplitude so the integrator can function as a low pass filter that passes signal below a certain frequency.
+
+Differentiator
+
+AC Signal/Square wave -> capacitor in series -> output
+                                 |
+                           resistor in parallel
+
+
+Given an AC signal, it outputs a symmetrical exponential increase/decays that has sharp positive and negative peaks.
+This acts like a high pass filter.
+Used to make narrow pulse generators for television receivers and trigger digital logic circuits.
+
+*** Coils
+Used to make inductors
+
+Resist rapid changes in current flow so:
+
+Slow sine wave -> pass through mostly unchanged
+Fast sine wave -> attenuates
+Slow square wave -> attenuates higher harmonics
+Fast square wave -> attenuates higher harmonics and make amplitude smaller
+Can be used as a bandpass filter in general
+
+Can add ringing to a square wave passing through it, happens when resistance of external current path connected to the ends of the coil is high.
+
+Transformers
+Some of the energy in the field around a coil can be induced (transferred) into a second, nearby coil.
+Input side of a transformer is called primary, output is called secondary.
+
+*** Types of coil
+
+Tuning - Tuning coils have a movable core or taps so their inductance (and therefore resonance frequency). Antennas uses these to pick up signals.
+
+Choke - Used in many circuits to limit fluctuating signals while passing steady current. High voltage pulse can be produced in a choke when current flow is interrupted, so beware.
+
+Transformers - Transform voltage/current to higher or lower levels. It is not free though, if they boost the voltage, the reduces the current, and vice versa. Power outgoing cannot exceed incoming power.
+
+*** Transformers
+
+Depending on the turn ratios of the of the primary to the secondary it can determine the voltage ratio:
+
+1:1 Isolation transformer
+Voltage/current are unaltered, just pass through. Isolate different parts of circuit and provide protection from electrical shock.
+
+Step-up transformer
+Voltage is increased by the turn ratio, so 1:5 turn ratio means output will be 5 times more than input. (Current decreases)
+
+Step-down transformer
+Voltage is decreased by the turn ratio, so 5:1 turn ratio means output will be 5 times less than input. (Current increases)
+
+Step-up/down is used in:
+Power conversion - Voltage delivered by power lines need to be lowered to be used in household circuits.
+Automotive ignition coil - Produce ignition sparks in gas engines.
+Tesla coil - Power for TV picture tubes, some lasers, neon lights etc.
+Impedance matching - Match impedance of amplifier to that of microphone, speaker or other device.
+
+*** Diodes
+Half-wave rectifier
+AC -> Diode -> Half wave AC output, the lower side is converted to DC
+
+Full wave/bridge rectifier (Four diodes in series)
+AC -> Full wave rectifier -> Absolute value of the AC signal out, so negative values becomes positive
+
+*** Types of Diodes
+Small signal - Tranform low current AC to DC, detect (demodulate) radio signals, multiply voltage, perform logic, absorb voltage spikes, etc
+
+Power Rectifier - Functionally same as small signal, but can handle much more current. Mainly in power supplies. Soak up excess heat and transfer it to a metal heat sink.
+
+Zener - A diode that has a specific reverse breakdown (conduction) voltage. Can be used as a voltage sensitive switch. Have breakdown voltages of 2-200 V so wide range.
+
+Light-Emitting - All diodes emit electromagnetic radiation when forward biased. Certain semiconductors like Gallium Phosphide emit alot more radition than silicon diodes. These are called LEDs. The radiation is light.
+
+Photodiode - All diodes responds to some degree when illuminated by light. Diodes specifically designed for this purpose of light detection are photodiodes. Silicon makes good photodiodes.
+
+*** Transistors
+Two main types: Bipolar and Field-Effect
+
+*** Bridge circuits
+Bridge circuits are mainly used to measure unknown values of resistance, capacitance, or inductance.
+
+Common bridge circuits for measuring different values:
+
+Resistor - Wheatstone, Kelvin
+Resistance-Capacitance - Schering, Wien
+Inductance - Maxwell, Anderson, Hay
+
+*** Decade box
+A decade box is a box that internally has a bunch of resistors, capacitors, or inductors connected in series and parallel with a control knob that can change it with an output port.
+So it's like variable resistor, capacitor, or inductor but it is made out of a network of fixed circuit elements.
+

@@ -1,0 +1,32 @@
+*** Overview
+https://en.wikipedia.org/wiki/International_Brotherhood_of_Electrical_Workers
+https://www.iprep.online/courses/njatc-aptitude-test-free/#free-practice-tab
+
+Labor union for electrical workers
+
+*** Questions
+
+Q: What is the next number in the following series of numbers?
+7 10 15 22 31
+A: 42
+
+Q: Consider the following formula:
+A = (B - 2) * (C + 5)
+If A = 6 and B = 0, what is the value of C?
+A: -8
+
+Q: Factor the Polynomial
+x^2 - 3*x - 18
+A: (x+3)*(x-6) (Sum is equal to coefficient B, product is equal to coefficient C)
+
+Q: Evaluate expression:
+x = 11
+x^2 - 15x + 56
+A: 12
+
+Q: Evaluate the value of the unknown variable:
+Y = 27
+Z = Y / 9
+X = Y * Z
+A: 81
+

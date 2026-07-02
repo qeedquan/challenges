@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+message Person {
+    required string first_name = 1;
+    required string last_name = 2;
+    required string phone_number = 3;
+}
+
+message Database {
+    repeated Person people = 1;
+}

@@ -1,0 +1,63 @@
+/*
+
+https://mihaly.barasz.com/compressed-loop/game.html
+
+You have a simple, line-oriented “compression” language. The language works as follows:
+
+The document must start with the begin keyword and end with the end keyword. There are two possible commands, each identified with a single letter followed by one or two non-negative integer arguments. These are as follows:
+
+Literal: l n — The n lines that follow this command are added to the output as is. The next command comes after that.
+
+Repeat: r n k — The k lines of the output which start at the nth line from the current end of the output are repeated. Note, that if k > n, then some of the repeated lines will be the lines that were added by this command itself.
+
+Your goal is to create a valid “compressed” document for which the output is identical to the input. Write the compressed document on the left, see the result on the right.
+
+For example,
+
+begin
+l 3
+foo
+bar
+baz
+r 2 1
+r 4 1
+end
+outputs
+
+foo
+bar
+baz
+bar
+foo
+What is the fewest number of instructions needed to realize a quine?
+
+*/
+
+// ported from @gsitcia solution
+begin
+l 3
+begin
+l 3
+begin
+l 3
+l 3
+begin
+l 3
+l 3
+l 3
+begin
+l 3
+r 4 4
+l 4
+r 4 4
+l 4
+r 4 4
+l 4
+r 4 4
+l 4
+doesn't
+matter
+r 2 2
+end
+r 2 2
+end

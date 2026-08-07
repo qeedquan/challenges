@@ -1,0 +1,75 @@
+Q: A branch circuit for an appliance that’s a continuous load must be rated not less than _____ of the marked ampere ratings of the appliance:
+A: 125%
+
+Q: For equipment rated 800 A or more, personal doors located less than _____ from the nearest edge of the working space must open in the direction of egress and have listed panic hardware:
+A: 25 ft
+
+Q: Overhead communications cables must have a vertical clearance of at least _____ from all points of roofs above which they pass:
+A: 8 ft
+
+Q: Coaxial cables outside and entering buildings must have a separation of at least ____ from electric light, power, Class 1, or non power limited fire alarm circuit conductors not in raceway or cable:
+A: 4 in
+
+Q: Receptacles not supplying loads directly related to circulation systems must be located not less than _____ from the inside walls of the pool:
+A: 6 ft
+
+Q: If installed horizontally, metal wireways must be supported at each end and at intervals not exceeding ______ :
+A: 5 ft
+
+Q: The overcurrent protection device of non-motor appliances must not exceed ________ if the overcurrent device rating is not marked:
+A: 20 A
+
+Q: The pit area in commercial garages, repair and storage areas is classified as Class I, Division 2 if there is mechanical ventilation providing a minimum of _____ air changes per hour:
+A: 6
+
+Q: The ampacity adjustment factors don’t apply to conductors installed in surface metal raceways if the cross sectional area of the raceway exceeds ______ :
+A: 4 sq in
+
+Q: Paddle fans over _____ must be supported independently of the box:
+A: 70 lbs
+
+Q: If internal combustion engines are used as the prime mover, an onsite fuel supply must be provided for not less than ______ of full demand operation of the system:
+A: 2 hours
+
+Q: The maximum approval electrical trade size of IMC is ________ :
+A: 4 in
+
+Q: If space limitations prevent ____ of space from the pool, underground wiring must be installed in a complete raceway system:
+A: 5 ft
+
+Q: All ____ 125V receptacle outlets that are not a part of the permanent wiring of the building used by personnel must be GFCI protected:
+A: 30A, 20A, 15A
+
+Q: Overhead conductors rating 600V or less, except for the conductors that supply the amusement ride or attractions, must have a clearance of _____ from portable amusement structures:
+A: 15 ft
+
+Q: A flexible cord is permitted for an in-sink waste disposal if the cord length is no longer than _____:
+A: 3 ft
+
+Q: Grounding type receptacles shall be used on which of the following branch circuits:
+A: Both 15 A or 20 A
+
+Q: Load where the maximum current is expected to exist for ______ hours or more is termed as continuous load:
+A: 3
+
+Q: The minimum lighting load for industrial commercial buildings is _____ volt amperes per square foot:
+A: 2
+
+Q: A cord no longer than ____ with an attachment plug and containing a copper equipment grounding conductor not smaller than 12 AWG is permitted for pool motors:
+A: 3 ft
+
+Q: Flexible Metal Conduit (FMC) must be secured within _____ of each box, cabinet, conduit body or other termination:
+A: 12 in
+
+Q: Power limited fire alarm circuit conductors must be separated by not less than _____ from insulated conductors of electric light, power or Class 1 circuits:
+A: 2 in
+
+Q: Maximum distance to any receptacles shall be ______ along the floor line of any wall space measured horizontally:
+A: 6 ft
+
+Q: Maximum overcurrent protection for 12 AWG copper conductor is:
+A: 20 A
+
+Q: The conductors between the service equipment, a separately derived system, or other power supply and the final branch circuit overcurrent device:
+A: Feeder
+

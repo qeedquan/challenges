@@ -1,0 +1,20 @@
+#!/bin/bc -lq
+
+# Find the product of two numbers a and b.
+#
+# Input
+# The input contains two non-negative integers a and b (a,b≤10^10000), each on a separate line.
+#
+# Output
+# Print one number equal to the product of a and b.
+#
+# Examples
+# Input #1
+# 65536
+# 216
+# Answer #1
+# 14155776
+
+print 65536*216;
+print "\n";
+halt;

@@ -1,0 +1,36 @@
+Counting
+What is the probability of pulling a green marble and rolling a number less than 4?
+
+G = 3
+R = 4
+3/7
+
+Dice is 1:6 so
+3/6
+
+3/7 * 3/6 = 9/42 = 3/14
+
+A: 3/14
+
+Law of SAMEness
+Simplify 2x + 5 + 7x
+A: 9x + 5
+
+Proportional Thinking
+Compare the perimeter and area of A and B.
+Perimeter A = 16
+Perimeter B = 32
+Area A = 15
+Area B = 60
+
+A: The perimeter of B is double the perimeter of A. The area of B is quadruple the area of A.
+
+Quantity and Denomination
+Write an expression that represents this scenario: Kingsley makes $10.50 an hour working at the local coffee shop. Then, he lets his friend Ausin borrow $5.
+A: 10.5h - 5
+
+Wholes and Parts
+Answer the question below:
+100/300 + 1/6 + x = 1
+A: 1/2
+

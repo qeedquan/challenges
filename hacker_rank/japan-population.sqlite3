@@ -1,0 +1,24 @@
+/*
+
+Query the sum of the populations for all Japanese cities in CITY. The COUNTRYCODE for Japan is JPN.
+
+Input Format
+
+The CITY table is described as follows:
+
+       CITY
+FIELD        TYPE
+ID           NUMBER
+NAME         VARCHAR2(127)
+COUNTRYCODE  VARCHAR2(3)
+DISTRICT     VARCHAR2(20)
+POPULATION   NUMBER
+
+*/
+
+Create table If Not Exists CITY (id number, name varchar2(127), countrycode varchar2(3), district varchar2(20), population number);
+insert into CITY (id, name, countrycode, district, population) values (1, 'TOKYO', 'JPN', 'SHIBUYA', 1100);
+insert into CITY (id, name, countrycode, district, population) values (2, 'XXX', 'JPN', 'ZZZ', 2100);
+insert into CITY (id, name, countrycode, district, population) values (3, 'XDX', 'JPN', 'YYY', 53265);
+select sum(population) from CITY where COUNTRYCODE = 'JPN';
+

@@ -1,0 +1,8 @@
+Q: What will happen to the brightness of the light bulb if the switch in this circuit is suddenly closed?
+
+A: Ideally, there will be no change whatsoever in the light bulb’s brightness when the switch is closed, because voltage sources are supposed to maintain constant voltage output regardless of loading. As you might have supposed, though, the additional current “drawn” by the resistor when the switch is closed might actually cause the lamp to dim slightly, due to the battery voltage “sagging” under the additional load. If the battery is well oversized for the application, though, the degree of voltage “sag” will be inconsequential.
+
+Notes:
+This question illustrates a disparity between the ideal conditions generally assumed for theoretical calculations, and those conditions encountered in real life. Truly, it is the purpose of a voltage source to maintain a constant output voltage regardless of load (current drawn from it), but in real life this is nearly impossible. Most voltage sources exhibit some degree of “sag” in their output over a range of load currents, some worse than others.
+
+In this example, it is impossible to tell how much the voltage source’s output will “sag” when the switch is closed, because we have no idea of what the resistor’s current draw will be compared to that of the light bulb, or what the voltage source’s rated output current is. All we can say is that theoretically there will be no effect from closing the switch, but that in real life there will be some degree of dimming when the switch is closed.

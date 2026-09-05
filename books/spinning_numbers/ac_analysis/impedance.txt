@@ -1,0 +1,35 @@
+*** Phase
+
+The term phase refers to the difference in time-delay of two sine waves. For example, if you draw sine and cosine on the same plot, they don’t overlap—they are out of phase by 90 degrees.
+For linear components (R, L, C), if you apply a sine wave voltage, the current is also a sine wave. If you apply a sine wave current, the voltage is a sine wave.
+For resistors the voltage and current always overlap perfectly-they are in phase, the phase angle between v and i is 0 circ.
+For inductors and capacitors the voltage and current do not overlap—they are out of phase by 90 degrees, just like sine and cosine are out of phase.
+The lead or lag in phase is different for L and C. More details here: Eli the Ice Man.
+
+ELI - Voltage leads, Current lags (Inductor)
+ICE - Current leads, Voltage lags (Capacitor)
+
+*** Frequency dependent behavior
+Impedance is the general notion of the ratio of voltage to current. Resistance is the impedance of a resistor.
+
+v/i = Z where Z can be the impedance of a resistor, capacitor, or inductor (Zr, Zc, Zi)
+
+In an AC circuit, impedance is frequency dependent for a capacitor and inductor, but not resistor due to the following formula:
+
+Take the magnitude of the impedance to get the total strength:
+
+|Zr| = R
+|Zl| = 2*pi*f*L
+|Zc| = 1/(2*pi*f*C)
+
+This corresponds to the following behavior in different frequency regimes:
+
+      0   | low  | high | inf
+|Zr|  R   |  R   |  R   |  R
+|Zl|  0   | low  | high | inf
+|Zc| inf  | high | low  |  0
+
+Resistors act the same in all frequencies.
+Inductors act like short circuit at low frequency, and open circuit at high.
+Capacators act like open circuit in low frequency, and short circuit at high.
+

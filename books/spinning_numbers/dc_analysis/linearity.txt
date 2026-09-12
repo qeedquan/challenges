@@ -1,0 +1,22 @@
+*** Linearity
+The 3 elements have the property of linearity so superposition principle holds for these circuits:
+Show linearity by using these equations:
+
+Resistors
+i = f(v) = 1/R * v
+
+Capacitors
+i = f(dv/dt) = C * dv/dt
+
+Inductors
+v = f(di/dt) = L * di/dt
+
+The main idea is showing current/voltage varies linearly with it's changing input such that the two following properties hold:
+f(ax) = a*f(x)
+f(x1 + x2) = f(x1) + f(x2)
+
+A way to see this is to plot the independent variable and the dependent variable and see if we get a line.
+
+Current-Voltage (IV) curves for capacitors and inductors looks nonlinear, but that because the linear relationship between the current and voltage
+for those components is with respect to the derivative (dv/dt, di/dt) and not each other.
+

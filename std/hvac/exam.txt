@@ -1,0 +1,146 @@
+Q: What's the Difference Between PSI, PSIA, & PSIG?
+A: 
+Pounds per square inch (PSI) is a common unit of pressure used in many different pressure measuring applications.
+It’s typically used for non-SI industrial and technical purposes such as tire pressure,
+fuel storage & distribution, waste water management, and test & measurement activities, among many others.
+
+While other units are used for different applications (such as inches of water column, Pascals, Bar, Torr, inHg, etc.), the terms absolute and gauge are universal.
+
+1 PSI =
+
+0.068046 atmospheres
+0.0689476 Bar
+6894.76 Pascals
+51.7149 Torr
+2.03602 inHg
+27.7076 inches of water column
+
+PSIA - PSI Absolute
+Absolute pressure is measured relative to a full vacuum.
+The pressure of a vessel completely void of any air molecules would be 0 PSIA, while average atmospheric surface pressure (at sea level) is roughly 14.7 PSIA.
+Barometric pressure is measured on weather stations and data buoys using absolute pressure sensors;
+the data gathered by these sensors helps meteorologists track and predict severe weather like hurricanes and typhoons.
+
+PSIG -PSI Gauge
+Gauge pressure is measured relative to ambient atmospheric pressure.
+A vessel completely void of any air molecules (at sea level) would be roughly -14.7 PSIG, and ambient air pressure is always measured as 0 PSIG,
+regardless of whatever current barometric pressure is.
+
+Q: What is the symbol for impedance?
+A: Z
+The symbol or letter for impedance is Z and it is represented by writing its magnitude and phase.
+
+Q: The safety ground conductor for A/C circuit is usually color coded
+A: green
+The NEC and NFPA has designated green as a ground.
+
+Q: Heat which causes a change in temperature of a substance is called:
+A: sensible heat.
+Any time there is a change of temperature indicated by the thermometer the heat level or intensity can easily be measured.
+In the writings of the early scientists who provided the foundations of thermodynamics, sensible heat had a clear meaning in calorimetric.
+
+Q: What is heat, which causes a change in the state of a material without a change in temperature, called?
+A: Latent heat
+Heat, which causes a change of state without a change in temperature, is known as latent heat.
+An example of latent heat is water changing to ice or vice a versa.
+Latent heat is the heat released or absorbed by a body or a thermodynamic system during a process that occurs without a change in temperature.
+
+Q: What is a sling psychrometer used to measure?
+A: Wet and dry bulb temperature
+A sling psychrometer is a device that consist of two thermometers fitted in a hinged bracket used for spinning the two thermometers.
+One of the bulbs is kept moist with distilled water on a sock or wick placed over the thermometer's tip.
+As the thermometers are rotated, evaporation of water from the wick lowers the temperature indicating a lower temperature than that of the dry-bulb thermometer.
+This is the Wet bulb temperature which will be lower than the dry bulb and can never be above dry bulb measurement.
+The lower the relative humidity, the lower the wet bulb temperature.
+The difference in the two bulbs readings can be applied to a psychrometric chart to calculate relative humidity and other properties of air.
+
+Q: A compressor is operating with a discharge pressure of 235.3 psig and a suction pressure of 35.3 psig. What is the compression ratio (pumping ratio)?
+A: 5:1
+Compression ratio is found by dividing the absolute discharge pressure by the absolute suction pressure. PSIG is converted to absolute by adding 14.7 to the pressure.
+
+In this problem, discharge pressure 235.3 plus 14.7 equals 250 PSIA and the suction pressure 35.3 plus 14.7 equals 50 PSIA.
+
+250/50 = 5
+
+The ratio is 5 to 1
+
+Q: In a (direct expansion) evaporator, liquid refrigerant must boil away as close to the end of the coil as possible in order to:
+A: operate at high efficiency.
+
+Direct type evaporators are designed to operate most efficiently with approximately 10 degrees superheat.
+In order to have superheat, all liquid must be boiled away before reaching the end of the evaporator.
+
+Q: A thermal expansion valve that is stuck wide open will cause
+A: a flooded evaporator
+A valve that is in the maximum open position will have liquid refrigerant flowing at a rate faster than the evaporator could boil it away; thus creating a flooded coil and liquid refrigerant going back to the compressor.
+
+Q: What is the major difference between a heat pump and an air conditioner?
+A: Reversing valve
+The reversing valve is the component that will reverse the flow of refrigerant when changing from air conditioning to heating.
+
+Q: What device controls the supplementary electric heat according to the outdoor temperature?
+A: Outdoor ambient thermostat
+
+To control energy, the heat pump will incorporate outdoor thermostats to limit the auxiliary heat before the balance point is reached.
+
+Q: Which of the following is not a factor that should be considered when installing an outdoor unit?
+A: Return air
+
+When installing the outdoor unit the return air is not a factor in the installation; all of the other answers are factors involving installation.
+
+Q: What is the minimum clearance for access panels on an outdoor condensing unit?
+A: 30 inches
+
+Most manufacturers recommend 30 inches of clearance from the structure, bushes, hedges and any other obstructions.
+
+Q: One BTU is the amount of heat required to raise the temperature of:
+A: one pound of water one-degree Fahrenheit.
+
+One BTU is the quantity of heat required to raise the temperature of one pound of water one degree Fahrenheit. The pound of water absorbs 1 BTU of energy to change from 68°F to 69°F.
+
+Q: What is the primary composition of natural gas?
+A: 95 percent methane
+
+Natural gas distributed for consumer use is 95.4 % Methane, 2.2 % Ethane, 1.6 % Nitrogen, 0.5 % Carbon Dioxide, 0.2 % Propane, .04% butane, .01% Oxygen and .05 % miscellaneous gases.
+
+Q: The electric heat element is usually made of what material?
+A: Nickel and chromium
+
+Heat elements are made of Ni-chrome which is nickel and chromium. They are combined to create a resistance wire.
+
+Q: Which of the following is an example of a resistive load?
+A: Crankcase heater
+
+A resistive load is an electrical load in which voltage and current are in phase and are converted to energy in the form of heat.
+Other examples of a resistive load are electrical heaters and incandescent bulbs.
+
+Q: An oversized heating and cooling system can cause which of the following?
+A: Moisture damage to a furnace heat exchanger and inadequate humidity removal during cooling cycles.
+
+Over sizing a system will cause short cycling which will cause moisture problems. In the summer, not enough moisture will be removed making the structure uncomfortable with very poor energy usage. In the winter, the system will not heat up enough causing moisture to condense in the heat exchanger, as well as the venting system, shortening the life of the system.
+
+Q: When the temperatures of a structure both inside and outside are equal, there is
+A: no heat transfer
+
+In order for heat to transfer there must be a difference in temperature. This follows the second law of thermodynamics. (Heat travels from a warmer area to cooler area.)
+
+Q: Polyolester (POE) oils stored in plastic containers will
+A: absorb moisture through the plastic
+
+Polyolester (POE) Oils are very hygroscopic and must be stored in a metal containers. Plastic containers may be permeable to moisture.
+
+Q: R-407C has
+A: the ability to fractionate
+
+R-407C is a near-azeotropic ternary blend of hydrofluorocarbons refrigerants. It contains difluoromethane (R-32), pentafluoroethane (R-125) and 1,1,1,2-tetrafluoroethane (R-134a) which all have different pressure temperature relationships.
+
+Q: What is a carbon footprint?
+A: The amount of carbon dioxide that is produced to support your lifestyle.
+
+A carbon footprint is an estimate of how much carbon dioxide is produced to support a person's lifestyle. Essentially, it measures an individual's impact on the climate based on how much carbon dioxide the person produces. Factors that contribute to a carbon footprint include the individual's travel methods and general home energy usage.
+
+Q: What is energy management?
+A: The monitoring and controlling of energy consuming devices.
+
+Energy management is a very broad term used to cover the entire field of energy and its use. Energy management can be subdivided into more specific areas such as purchase utility, energy consumption and energy demand.
+

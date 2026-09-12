@@ -1,0 +1,30 @@
+Counting
+How many circles will there be in step 5?
+
+f(1) = 4
+f(2) = 7
+f(3) = 10
+f(5) = 13
+f(6) = 16
+f(7) = 19
+A: 19
+
+Law of SAMEness
+2x + 3y = 2x + 3y
+A: 2x + 3y
+
+Proportional Thinking
+If 1/2% is 6, then 100% is ________.
+6/(0.05/100) = 1200
+A: 1200
+
+Quantity and Denomination
+Order the fractions
+1/5 1/10 1/4 1/8
+A: 1/10 1/8 1/5 1/4
+
+Wholes and Parts
+What is the measure if angle O
+44 + 92 + O = 180
+A:44
+

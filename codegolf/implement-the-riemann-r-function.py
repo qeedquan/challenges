@@ -1,0 +1,123 @@
+#!/usr/bin/env python3
+
+"""
+
+The Riemann R function is as follows:
+
+R(x) = Sum[1, Inf] mu(n)*li(x^(1/n)) / n
+
+This uses the Möbius function as well as the logarithmic integral.
+
+From Wikipedia, the Möbius function is defined so that for any positive integer n, μ(n) is the sum of the primitive nth roots of unity. It has values in {−1,0,1} depending on the factorization of n into prime factors:
+
+μ(n)=+1 if n is a square-free positive integer with an even number of prime factors.
+μ(n)=−1 if n is a square-free positive integer with an odd number of prime factors.
+μ(n)=0 if n has a squared prime factor.
+The logarithmic integral is defined as:
+
+li(x)=Int[2, x] dt/logt.
+
+An alternative way to compute the Riemann R function is via the Gram series. That is:
+
+R(x) = 1 + Sum[k=1, Inf][(ln x)^k / (k*k!*zeta(k + 1))]
+
+The function ζ() is the Riemann zeta function.
+
+Challenge
+Write code that computes R(x) for x up to 10^31. The output may have a margin of error of up to 1.
+
+Test cases
+Here are the answers for 10i for i={1,2,…,31}.
+
+1 4.56458314100509023986577469558
+2 25.6616332669241825932267979404
+3 168.359446281167348064913310987
+4 1226.93121834343310855421625817
+5 9587.43173884197341435161292391
+6 78527.399429127704858870292141
+7 664667.447564747767985346699887
+8 5761551.86732016956230886495973
+9 50847455.4277214275139488757726
+10 455050683.306846924463153241582
+11 4118052494.63140044176104610771
+12 37607910542.2259102347456960174
+13 346065531065.82602719789292573
+14 3204941731601.68903475050075412
+15 29844570495886.9273782222867278
+16 279238341360977.187230253927299
+17 2623557157055978.00387546001566
+18 24739954284239494.4025216514448
+19 234057667300228940.234656688561
+20 2220819602556027015.40121759224
+21 21127269485932299723.733864044
+22 201467286689188773625.159011875
+23 1925320391607837268776.08025287
+24 18435599767347541878146.803359
+25 176846309399141934626965.830969
+26 1699246750872419991992147.22186
+27 16352460426841662910939464.5782
+28 157589269275973235652219770.569
+29 1520698109714271830281953370.16
+30 14692398897720432716641650390.6
+31 142115097348080886394439772958.0
+Your code doesn't need to be fast, but ideally it should complete in under a minute.
+
+Related challenges
+Möbius function
+Riemamn zeta function
+
+Precision
+You will need 128 bit floats to represent the output. In C __float128 from quadmath.h is the simplest way (long double will most likely be 80 bits). Other languages may have standard libraries to support 128 bit floats (e.g Decimal in Python). code-golf challenges are judged per language so there is no penalty in using whatever is needed for your favorite langauge.
+
+"""
+
+from scipy.special import *
+from math import *
+
+def R(x):
+    r = 1
+    for i in range(1, 165):
+        r += log(x)**i / (i*factorial(i)*zeta(i+1))
+    return r
+
+def main():
+    tab = [
+        4.56458314100509023986577469558,
+        25.6616332669241825932267979404,
+        168.359446281167348064913310987,
+        1226.93121834343310855421625817,
+        9587.43173884197341435161292391,
+        78527.399429127704858870292141,
+        664667.447564747767985346699887,
+        5761551.86732016956230886495973,
+        50847455.4277214275139488757726,
+        455050683.306846924463153241582,
+        4118052494.63140044176104610771,
+        37607910542.2259102347456960174,
+        346065531065.82602719789292573,
+        3204941731601.68903475050075412,
+        29844570495886.9273782222867278,
+        279238341360977.187230253927299,
+        2623557157055978.00387546001566,
+        24739954284239494.4025216514448,
+        234057667300228940.234656688561,
+        2220819602556027015.40121759224,
+        21127269485932299723.733864044,
+        201467286689188773625.159011875,
+        1925320391607837268776.08025287,
+        18435599767347541878146.803359,
+        176846309399141934626965.830969,
+        1699246750872419991992147.22186,
+        16352460426841662910939464.5782,
+        157589269275973235652219770.569,
+        1520698109714271830281953370.16,
+        14692398897720432716641650390.6,
+        142115097348080886394439772958.0
+    ]
+    for i in range(len(tab)):
+        x = R(10**(i+1))
+        y = tab[i]
+        eps = 10**(i/2) 
+        assert(abs(x-y) < eps)
+
+main()

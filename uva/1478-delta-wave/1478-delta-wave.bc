@@ -1,0 +1,21 @@
+#!/bin/bc -lq
+
+# https://oeis.org/A001006
+define solve(n) {
+	a = 1;
+	r = 1;
+	for (i = 1; i <= n/2; i++) {
+		p = (n - 2*i + 1) * (n - 2*i + 2);
+		q = i * (i+1);
+		a = a * p;
+		a = a / q;
+		r = r + a;
+	}
+	return r;
+}
+
+for (x = 0; x <= 50; x++) {
+	print x; " "; solve(x);
+}
+halt;
+

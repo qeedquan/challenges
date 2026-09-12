@@ -1,0 +1,12 @@
+{
+    "store_name": "Barry's Farmer's Market",
+    "foods": {
+        "apple": "5.91",
+        "peach": "1.84",
+        "carrot": "6.44",
+        "beans": "3.05",
+        "orange": "5.75",
+        "cucumber": "6.42"
+    },
+    "store_location": "Corner of Elm Tree Hill and 158th Street"
+}

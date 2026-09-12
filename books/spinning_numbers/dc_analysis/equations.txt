@@ -1,0 +1,16 @@
+Solving a circuit means you setup a system of simultaneous equations and solve it for current/voltage.
+
+Since every circuit element has a voltage/current, this means that for E elements, there will be 2E independent equations.
+Generate equations using:
+
+1. E equations from i-v laws for each circuit element (ohms law/etc)
+2. E equations from KCL (N - 1), where N is the number of nodes
+3. E - (N - 1) equations from KVL
+
+E + (N - 1) - (N - 1) + E = 2E
+
+Reference
+Feldmann, Peter & A. Rohrer, Ronald. (1991). “Proof of the Number of Independent Kirchhoff Equations in an Electrical Circuit.” Circuits and Systems, IEEE Transactions on. 38. 681 - 684. 10.1109/31.135739.
+
+This short paper presents an inductive proof showing: For a circuit with b branches and n nodes,
+the number of linearly independent KCL node equations is $n - 1$ and the number of independent KVL loop equations of is b - n + 1. (An inductive proof starts super simple and adds complexity.)

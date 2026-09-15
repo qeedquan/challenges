@@ -1,0 +1,77 @@
+*** EPA Section 608 is a regulation under the Clean Air Act that requires technicians handling refrigerants in HVAC (heating, ventilation, and air conditioning) equipment to be certified. 
+
+Q: Two locations where a cold air return should be installed:
+A: Open area of wall and low to the ground.
+
+Q: Which of the following is a law of thermodynamics:
+A: Heat moves toward a place with lower intensity.
+
+Q: Sensible heat describes ___:
+A: How hot something feels.
+
+Q: Latent heat measures ___:
+A: The heat potential of a substance.
+
+Q: Latent heat is measured in ___:
+A: British Thermal Units
+
+Q: If 1 pound of water warms to 60 degrees F from 55 degrees F, what btu of latent heat will it have absorbed?
+A: 5
+
+Q: What is the amount of heat energy required to evaporate 1 pound of water?
+A: 970 btu
+
+Q: In an air conditioning and refrigeration system, what occurs in an evaporator?
+A: The refrigerant absorbs the latent heat.
+
+Q: In an air conditioning and refrigeration system, what occurs in a condenser?
+A: The refrigerant releases the latent heat.
+
+Q: In a sealed system, pressure and temperature ___:
+A: follow each other up and down
+
+Q: Which of the following is not a type of compressor?
+A: Lateral
+
+Q: In Fahrenheit, the boiling point of water is
+A: 212 degrees
+
+Q: To change Fahrenheit to Celsius, which formula is used?
+A: C = (F - 32) / 1.8
+
+Q: Which of the following is not a method by which heat may be transferred from a warmer substance to a colder substance?
+A: Retraction
+
+Q: What btu of heat is required to raise 1 pound of ice 1 degree F when the temperature is below 32 degrees F?
+A: .5
+
+Q: What btu of heat is required to raise 1 pound of steam 1 degree F above the temperature of 212 degrees F?
+A: .5
+
+Q: A day-ton of refrigeration is the amount of refrigeration produced by melting 1 ton of ice at a temperature of 32 degrees F in 24 hours.
+A: True
+
+Q: Ice exerts pressure
+A: Downwards
+
+Q: Pressure is usually measured in
+A: Pounds per square inch
+
+Q: Atmospheric pressure, at sea level, is 14.7 psia.
+A: True
+
+Q: When one rises into the atmosphere, the atmospheric pressure decreases by 1 psi for every ___
+A: 2,343 feet
+
+Q: Vaporization can be increased by _____________ the pressure on a liquid.
+A: Reducing
+
+Q: Every mechanical refrigeration system has __________ different pressure levels.
+A: 2
+
+Q: Pressure on the high pressure side of a mechanical refrigeration unit is called
+A: discharge or head pressure
+
+Q: The exertion of pressure on a substance with a constant temperature increases its volume in proportion to the increase in pressure.
+A: False
+

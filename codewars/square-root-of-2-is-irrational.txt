@@ -1,0 +1,24 @@
+*** Problem
+Proving that the square root of 2 is irrational is a traditional problem in mathematics. Your task is to formally prove it.
+
+*** Solution
+Let's suppose sqrt(2) is a rational number. Then we can write it sqrt(2) = a/b where a, b are whole numbers, b not zero.
+
+We additionally assume that this a/b is simplified to lowest terms, since that can obviously be done with any fraction.
+Notice that in order for a/b to be in simplest terms, both of a and b cannot be even. One or both must be odd. Otherwise, we could simplify a/b further.
+
+From the equality sqrt(2) = a/b it follows that 2 = a^2/b^2,  or  a^2 = 2*b^2.  So the square of a is an even number since it is two times something.
+
+From this we know that a itself is also an even number. Why? Because it can't be odd; if a itself was odd, then a*a would be odd too. Odd number times odd number is always odd.
+
+If a itself is an even number, then a is 2 times some other whole number. In symbols, a = 2k where k is this other number. We don't need to know what k is; it won't matter.
+
+If we substitute a = 2k into the original equation 2 = a^2/b^2, this is what we get:
+
+2     = (2*k)^2/b^2
+2     = 4*k^2/b^2
+2*b^2 = 4*k^2
+b^2   = 2*k^2
+
+This means that b^2 is even, from which follows again that b itself is even. This is a contradiction.
+

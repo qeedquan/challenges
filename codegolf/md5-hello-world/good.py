@@ -1,0 +1,3 @@
+# coding: L1
+print('%s World!'%('Hello','Goodbye Cruel')['Z'>"""ъzћщ
+WjmEтчSпе#nоЏк-Z<fi #ытыыорЊ	‡kЧT,­qK=®=€Д†д7vТ2ЇбWь§›(0гўdЮеЕA4жш+tРWOLeБн-Ейте«·Щµл0љ4zgqЯ?Н…fя¦јФhЁоx"""[19]])

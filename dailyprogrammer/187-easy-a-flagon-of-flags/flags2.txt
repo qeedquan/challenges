@@ -1,0 +1,8 @@
+6
+a:all
+*A:address
+f:force
+n:networking
+N:numerical-list
+*o:output
+-aNo output-dir/file.txt 12 --verbose --address=192.168.0.44

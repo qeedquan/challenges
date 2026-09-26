@@ -1,0 +1,12 @@
+Q: Determine the amount of voltage impressed across each resistor in this circuit:
+
+Hint: locate all the points in this circuit that are electrically common to one another!
+
+A:
+Each resistor has 15 volts across it in this circuit.
+
+Notes:
+The hint suggesting identification of electrically common points is critical to students’ understanding of parallel circuits.
+Once they see that there is no difference (as far as voltage is concerned) between the top of one resistor,
+the top of the other, or the top of the battery (and likewise for all the bottom connections),
+it should become clearly evident why voltage must be equal across these three components.

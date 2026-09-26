@@ -1,0 +1,24 @@
+Counting
+21 / 3 = ___
+A: 7
+
+Law of SAMEness
+1/2 + 1/4 = ___
+A: 3/4
+
+Proportional Thinking
+Mr. Snail can travel 3 inches in 2 minutes. How long will it take him to travel one (1) foot?
+12 inches in a foot, so (12/3)*2 = 8 minutes
+A: 8 minutes
+
+Quantity and Denomination
+Fill in the blank with... 10 weeks ____________ 100 days
+10 weeks = 70 days
+70 < 100
+A: is less than
+
+Wholes and Parts
+A quarter of 22 = _____
+0.25 * 22 = 5 1/2
+A: 5 1/2
+

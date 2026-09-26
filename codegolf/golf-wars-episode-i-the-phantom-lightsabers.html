@@ -1,0 +1,92 @@
+<!-- 
+
+Introduction
+Obi-Wan Kenobi, Qui-Gon Jinn and Darth Maul are about to fight! However, they've all forgotten to bring their respective lightsabers. Write a program or function which, given the string Jedi as input, generates an image similar to this*:
+
+https://i.sstatic.net/9q1xMm.png
+
+and given the string Sith, generates an image similar to this:
+
+https://i.sstatic.net/JhqyFm.png
+
+Images specifications
+Any of the 3 lightsabers (the white blade including the round edge at the end(2 round edges for the red one) and including the handle) is 900px long (This does not include the color gradient around the blade).
+
+The round edge at the end of the blade is a halfcircle (a discrete approximation of it, obviously) with a diameter equal to the width of the blade.
+
+The blade (i.e. the white part of the lightsaber) is 12px wide.
+
+The green and blue lightsabers are separated by 200 px (from the center line of the green blade to the center line of the blue blade).
+
+The handle for all 3 lightsabers is 180px (1/5 of the total length). Therefore the blade itself including the round edge(s) is 720px long for the blue and green lightsabers and 360px long for the two blades of the red lightsaber.
+
+The handle for the blue and green lightsabers is at the bottom of the lightsaber. The handle for the red lightsaber is horizontaly centered.
+
+The length of the gradient from the edge of the white blade to a completely white color is 1.5 * the width of the blade (e.g. 18px for the linear parts).
+
+The green gradient goes from RGB (0,255,0) to white (255,255,255) (or transparent if it's easier for you to implement). The red gradient goes from (255,0,0) to white, and the blue gradient goes from (0,0,255) to white.
+
+The color of the handle is RGB (128,128,128).
+
+There can be white empty space around the lightsaber(s).
+
+Inputs
+Either Sith or Jedi as a string. You can take this string from STDIN, as a function argument, command line parameter, or anything similar. You may assume that the input will always be exactly Sith or Jedi and nothing else.
+
+Output
+You must generate an image file containing the image corresponding to the input string. You are relatively free to choose whatever image format you want, as long as it is a True Color image.
+
+Scoring
+This is code-golf, so the shortest answer in bytes wins. May the force be with you.
+
+* The images in this post are not displayed full size.
+
+!-->
+
+<!--
+
+Ported from @Adam Katz solution
+
+Specify a tag to see the image:
+file.html#Jedi 
+file.html#Sith
+
+-->
+
+<html>
+    <head>
+        <title>Lightsabers</title>
+    </head>
+    <body>
+        <style>
+            /* hide all but the anchored lightsaber (only lightsabers have ids) */
+            [id]:not(:target) { display:none }
+            /* tables are lightsabers */
+            table { width:900px; height:12px; border-spacing:0 }
+            td:last-child { border-radius:0 12px 12px 0 } /* curved tip */
+            #Sith td:first-child { border-radius:12px 0 0 12px } /* 2nd curved tip */
+            #Sith td { box-shadow:0 0 18px red }
+            #Jedi { transform:rotate(-90deg); margin:350px 0 }
+            #Jedi td { box-shadow:0 0 18px #0f0 } /* green */
+            * + table { margin:200px 0 0 0 } /* gap between Jedi lightsabers */
+            #Jedi * + table td { box-shadow:0 0 18px #00f } /* blue */
+            /* handles */
+            td:nth-last-child(2) { background:#888; width:180px; box-shadow:none!important }
+        </style>
+        <div id=Jedi>
+            <table>
+                <td>
+                <td>
+            </table>
+            <table>
+                <td>
+                <td>
+            </table>
+        </div>
+        <table id=Sith>
+            <td>
+            <td>
+            <td>
+        </table>
+    </body>
+</html>

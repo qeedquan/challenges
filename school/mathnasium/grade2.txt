@@ -1,0 +1,20 @@
+Counting
+28 + ______ = 40
+A: 12
+
+Law of SAMEness
+If the sum of 3 + 65 has a 9 in the tens place, what digits could be under the square?
+A: 4, 3, 2, 1, 0
+
+Proportional Thinking
+One carton of milk is served with three cookies. How many cartons of milk are needed to serve 9 cookies?
+A: 3
+
+Quantity and Denomination
+My ones place is half of my tens digit. My tens place is greater than 6. What whole number is half of a single-digit number greater than 6?
+A: 84
+
+Wholes and Parts
+Half of ? (whole) = 8 1/2
+A: 17
+

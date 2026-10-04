@@ -1,0 +1,96 @@
+/*
+
+Main task
+Your task is to print out integers in descending order, starting from 1, and increasing as you keep hitting 1 again, up until the given input is reached, then, print out the rest until you hit 1 again. Example with input 6:
+
+1
+21
+321
+4321
+54321
+654321
+Without newlines (valid output):
+121321432154321654321
+Side note: this is A004736 in the OEIS. Also, the first example (with newlines) is an invalid output, as specified in the rules.
+Input
+Your code may take any kind of input (graphical, STDIN) in the form of an integer or number.
+
+Output
+Your code should output the above described sequence, up until the input number is reached, then finish to output until it reaches 1 again. The output may be anything, therefore numbers, strings, integers, or graphical output. It is required to print out a single number (no newlines if it's a string). Your output can be in- and outroduced with as many characters as you need (e.g. []).
+
+Since there was some misunderstanding, here's a regex pattern you can try your outputs on.
+
+^(\D*(\d)+\D*)$
+Rules
+The output must be a full number, not split up by anything, not even newlines.
+The algorithm shouldn't check for the first instance of N appearing in any way (e.g. the 21 in 121321), but rather for the first instance of N as the actual number.
+A single trailing newline is allowed.
+The handling for negative input is fully your choice, negative numbers aren't cases you should test.
+Test cases
+Input: 6
+Output: 121321432154321654321
+
+
+Input: 1
+Output: 1
+
+
+
+Input: 26
+Output: 121321432154321654321765432187654321987654321109876543211110987654321121110987654321131211109876543211413121110987654321151413121110987654321161514131211109876543211716151413121110987654321181716151413121110987654321191817161514131211109876543212019181716151413121110987654321212019181716151413121110987654321222120191817161514131211109876543212322212019181716151413121110987654321242322212019181716151413121110987654321252423222120191817161514131211109876543212625242322212019181716151413121110987654321
+
+
+
+Input: 0
+Output: 0, Empty, or Error
+
+Input: 21
+Output: 121321432154321654321765432187654321987654321109876543211110987654321121110987654321131211109876543211413121110987654321151413121110987654321161514131211109876543211716151413121110987654321181716151413121110987654321191817161514131211109876543212019181716151413121110987654321212019181716151413121110987654321
+
+Thanks @Emigna, I used his algorithm to calculate these test cases.
+
+Winner
+The winner has been chosen! It was ErikGolfer's answer with an impressive 5 bytes! Congratulations!
+
+*/
+
+#include <assert.h>
+#include <stdio.h>
+#include <string.h>
+
+typedef unsigned long long uvlong;
+
+// https://oeis.org/A004736
+void
+solve(uvlong n, char *b)
+{
+	uvlong i, j;
+
+	*b = '\0';
+	for (i = 1; i <= n; i++) {
+		for (j = i; j > 0; j--)
+			b += sprintf(b, "%llu", j);
+	}
+}
+
+void
+test(uvlong n, const char *r)
+{
+	char b[512];
+
+	solve(n, b);
+	puts(b);
+	assert(!strcmp(b, r));
+}
+
+int
+main()
+{
+	test(6, "121321432154321654321");
+	test(1, "1");
+	test(26, "121321432154321654321765432187654321987654321109876543211110987654321121110987654321131211109876543211413121110987654321151413121110987654321161514131211109876543211716151413121110987654321181716151413121110987654321191817161514131211109876543212019181716151413121110987654321212019181716151413121110987654321222120191817161514131211109876543212322212019181716151413121110987654321242322212019181716151413121110987654321252423222120191817161514131211109876543212625242322212019181716151413121110987654321");
+	test(0, "");
+	test(21, "121321432154321654321765432187654321987654321109876543211110987654321121110987654321131211109876543211413121110987654321151413121110987654321161514131211109876543211716151413121110987654321181716151413121110987654321191817161514131211109876543212019181716151413121110987654321212019181716151413121110987654321");
+
+	return 0;
+}

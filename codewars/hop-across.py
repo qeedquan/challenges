@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+
+"""
+
+You are trying to cross a river by jumping along stones. Every time you land on a stone, you hop forwards by the value of that stone. If you skip over a stone then its value doesn't affect you in any way. Eg:
+
+ x--x-----x-->
+[1][2][5][1]
+
+Of course, crossing from the other side might give you a different answer:
+
+ <--------x--x
+   [1][2][5][1]
+
+Given an array of positive integers, return the total number of steps it would take to go all the way across the river (and past the end of the array) and then all the way back. All arrays will contain at least one element, and may contain up to 100 elements.
+
+Examples
+  x--x-----x-->
+ [1][2][1][2]
+<----x-----x
+
+therefore hop_across([1,2,1,2]) = 3 + 2 = 5
+
+   x-----x--------x------>
+  [2][2][3][1][1][2][1]
+<--------x--x-----x--x
+
+therefore hop_across([2,2,3,1,1,2,1]) = 3 + 4 = 7
+
+"""
+
+def hop_across(stones):
+    forward = 0
+    backward = 0
+    count = 0
+    while forward < len(stones):
+        count += 1
+        forward += stones[forward]
+    while backward < len(stones):
+        count += 1
+        backward += stones[len(stones) - backward - 1]
+    return count
+
+def main():
+    assert(hop_across([1, 2, 1, 2]) == 5)
+    assert(hop_across([2, 2, 3, 1, 1, 2, 1]) == 7)
+
+main()
+

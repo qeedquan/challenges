@@ -1,0 +1,38 @@
+<!--
+
+Your challenge is to write a program that constantly prompts for input, and when input is given, output that five seconds* later. However, your program must continue prompting for input during that time.
+
+Since this is a bit confusing, here's a demo.
+
+<pre id=x></pre><input id=h onchange='var k=this;(()=>{let a=k.value;setTimeout(_=>document.getElementById("x").innerText+=a+"\n", 5000)})();this.value="";' >
+Full page
+(Try typing multiple things into the box and pressing enter.)
+
+This is code-golf, shortest wins!
+
+*Anywhere between four and six seconds is fine.
+
+Definition of "prompting for input"
+I'm not really sure how to define "prompting for input" in a way that works across most languages, so here's a couple of ways you can do this:
+
+Prompt for input in a terminal, recieving it on pressing enter
+Open a dialog box that asks for input
+Record every keypress and output those delayed - see this fiddle thanks to tsh
+If you're not sure, ask. Note that for the first two options, the operation must not block further output.
+
+--!>
+
+<html>
+	<head><title>Laggy Text Editor</title></head>
+	<body>
+		<script>
+			function output(context) {
+				let text = context.value;
+				setTimeout(_=> document.getElementById("input").innerText += text + "\n", 5000);
+				context.value = "";
+			}
+		</script>
+		<pre id=input></pre>
+		<input onchange='output(this);' />
+	</body>
+</html>

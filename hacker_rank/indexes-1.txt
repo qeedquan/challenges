@@ -1,0 +1,2 @@
+Q: How many index architecture type classifications are there in MS SQL Server?
+A: 2 (Clustered and Non-Clustered Indexes)

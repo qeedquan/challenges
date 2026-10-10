@@ -1,0 +1,6 @@
+4
+a:all
+f:force
+n:networking
+N:numerical-list
+-aN 12 --verbose 192.168.0.44

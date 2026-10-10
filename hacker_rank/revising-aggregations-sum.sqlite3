@@ -1,0 +1,25 @@
+/*
+
+Query the total population of all cities in CITY where District is California.
+
+Input Format
+
+The CITY table is described as follows:
+
+       CITY
+FIELD        TYPE
+ID           NUMBER
+NAME         VARCHAR2(127)
+COUNTRYCODE  VARCHAR2(3)
+DISTRICT     VARCHAR2(20)
+POPULATION   NUMBER
+
+*/
+
+Create table If Not Exists CITY (id number, name varchar2(127), countrycode varchar2(3), district varchar2(20), population number);
+insert into CITY values (1, 'TOKYO', 'USA', 'California', 1100);
+insert into CITY values (2, 'ZZTOK', 'USA', 'California', 1100000);
+insert into CITY values (3, 'FGK', 'USA', 'JMX', 1100000);
+insert into CITY values (4, 'PFWKG', 'USA', 'JG', 5000);
+SELECT SUM(POPULATION) FROM CITY WHERE DISTRICT = 'California';
+

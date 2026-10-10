@@ -1,0 +1,24 @@
+% Ported from @luser droog solution
+% Renders each character normally, to get the correct spacing to advance, then takes all the curves which describe the glyph and fills each one.
+% Normally the interior and exterior curves are described with different orientations,
+% so a fill will leave the interior empty, regardless of whether it's using the non-zero winding rule or even-odd rule.
+% Filling separately, it all gets filled.
+%
+% Usage. String object is expected to be on the stack when the program starts. Extra scaling just to make it visible.
+% gs -c '7 7 scale(Example Text)' -f file.ps
+
+/Courier 9 selectfont
+9 9 moveto
+{
+    ( ) dup 0 4 3 roll put
+    currentpoint 3 2 roll
+    dup show
+    currentpoint 3 2 roll
+    5 3 roll moveto
+    true charpath
+    [ [{/moveto cvx}{/lineto cvx}{/curveto cvx}{/closepath cvx]cvx[}
+       pathforall pop] ]
+    { exec currentpoint fill moveto } forall
+    pop moveto
+} forall
+

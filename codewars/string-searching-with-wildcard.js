@@ -1,0 +1,44 @@
+/*
+
+The method below, is the most simple string search algorithm. It will find the first occurrence of a word in a text string.
+
+haystack = the whole text
+
+needle = searchword
+
+wildcard = _
+
+find("strike", "i will strike down upon thee"); // return 7
+The find method is already made.
+
+The problem is to implement wildcard(s) in the needle. If you have a _ in the needle it will match any character in the haystack.
+
+A normal string search algorithm will find the first occurrence of a word(needle) in a text(haystack), starting on index 0. Like this:
+
+find("strike", "I will strike down upon thee"); return 7
+A wildcard in the needle will match any character in the haystack. The method should work on any types of needle and haystack. You can assume the needle is shorter than(or equal to) the haystack.
+
+find("g__d", "That's the good thing about being president"); // return 11
+If no match the method should return -1
+
+*/
+
+var assert = require('assert');
+
+function find(needle, haystack) {
+	let regex = new RegExp(needle.replace(/[\^&*+\-()\[\]$%\?]/g, (m) => '\\' + m).replace(/_/g, '.'));
+    let best = (haystack.match(regex) || [])[0];
+	return haystack.indexOf(best);
+}
+
+assert(find("strike", "i will strike down upon thee") == 7);
+assert(find("g__d", "That's the good thing about being president") == 11);
+
+let haystack = "Once upon a midnight dreary, while I pondered, weak and weary";
+assert(find("Once", haystack) == 0);
+assert(find("midnight", haystack) == 12);
+assert(find("codewars", haystack) == -1);
+
+assert(find("_po_", haystack) == 5);
+assert(find("___night", haystack) == 12);
+

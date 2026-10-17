@@ -1,0 +1,28 @@
+*** Resistivity
+Resistivity is a property of bulk material. “Bulk” means “a big chunk of” or “a bucket of.” Resistivity is the measure of how much the bulk stuff fights against the flow of current. Higher resistivity means more fight.
+
+The variable name for resistivity is usually the Greek lowercase rho. It looks like a little p, but it’s more fun to write because you start at the bottom and swoop up.
+
+Graphite (a form of carbon) conducts electricity about 100 times less than copper. It is used to make resistors (and pencil leads). To make resistors you mix together powdered graphite, clay, and glue. A bucket of this mixture has a bulk resistivity based on the proportions of carbon, clay, and glue. You adjust the proportions up and down to get any resistivity you want. If you mix in more carbon powder that makes the resistivity lower.
+
+*** Resistance
+Resistance is the value of a particular resistor. Take your bucket of carbon/clay/glue goop and pull out a little blob. Form it into a little rectangle or cylinder. Attach wires to the ends. When the glue dries, you have a “lumped” circuit element called a resistor. The resistance depends the resistivity of the bulk material AND the shape of the resistor.
+
+Resistance is the measure of how much a specific resistor fights against the flow of current. Higher resistance means more fight.
+
+*** Measuring resistance
+
+How do you measure resistance? We use Ohm’s Law of course. An ohmmeter or multimeter has a battery inside it that applies a small voltage to the resistor being measured. The meter knows the voltage and measures the current, then it calculates the resistance, R = v/i.
+
+*** Measuring resistivity
+
+You might have a big chunk of some material and you want to know its resistivity. Or you may have a sheet of an unknown material and you want to identify it by measuring its resistivity. How do you measure resistivity? That’s a bit tricky.
+
+You might try to use an ohmmeter to measure between two points. But, the meter tells you resistance in ohms, not resistivity in ohm*meters. Depending on where you jab the probes into the material the the meter gives a different number. This isn’t doing the job.
+
+We measure resistivity using the equation where we found resistivity in terms of resistance, area, and length,
+
+rho = R*A/l
+
+You basically sacrifice some material to build a carefully dimensioned resistor. You can compute rho if you know all three variables on the right side. Get out your chisel or scissors and cut off a chunk of bulk material.
+Trim it to a precise size with known A and known l. Touch your ohmmeter probes on the A ends of the test piece and read R from the ohmmeter. Put all three numbers into the equation and compute rho.

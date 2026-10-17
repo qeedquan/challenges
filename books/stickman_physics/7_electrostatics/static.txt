@@ -1,0 +1,15 @@
+Q: You comb your hair on a dry day.  The comb gained 2.3 x 10e4 electrons.
+   Each electron has a charge of -1.6 x 10e-19 Coulombs.
+   Does your hair or plastic comb have a greater affinity for electrons? Why?
+A: The plastic comb has a greater affinity for electrons.  This is because it gained electrons after the friction of combing your hair knocked electrons out of place.
+
+Q: Assume your hair and comb were all neutral before combing.  What is the charge of the comb afterwards?
+A: number of electrons gained x charge of an electron
+   (2.3 x 10e4) x (-1.6 x 10e-19) = -3.68 x 10e-15 C
+
+Q: What is the charge of your hair afterwards?
+A: Your hair would have lost the electrons and become equally positive
+   number more protons than electrons  x charge of a proton
+   (2.3 x 10e4) x (+1.6 x 10e-19 ) = +3.68 x 10e-15 C
+
+

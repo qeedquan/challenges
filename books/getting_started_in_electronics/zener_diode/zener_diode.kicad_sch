@@ -1,0 +1,468 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid e35db226-7159-4d3a-a1c8-33bd98783d79)
+
+  (paper "A4")
+
+  (lib_symbols
+    (symbol "Device:D_Zener" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "D" (at 0 2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "D_Zener" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "diode" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Zener diode" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "D_Zener_0_1"
+        (polyline
+          (pts
+            (xy 1.27 0)
+            (xy -1.27 0)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+            (xy -0.762 1.27)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27)
+          )
+          (stroke (width 0.254) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "D_Zener_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54)
+          (name "K" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 3.81 0 180) (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Simulation_SPICE:0" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+      (property "Reference" "#GND" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Value" "0" (at 0 -1.778 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "simulation" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "0V reference potential for simulation" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "0_0_1"
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 0 -1.27)
+            (xy 1.27 0)
+            (xy -1.27 0)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+      )
+      (symbol "0_1_1"
+        (pin power_in line (at 0 0 0) (length 0) hide
+          (name "0" (effects (font (size 1.016 1.016))))
+          (number "1" (effects (font (size 1.016 1.016))))
+        )
+      )
+    )
+    (symbol "Simulation_SPICE:VPWL" (pin_numbers hide) (pin_names (offset 0.0254)) (in_bom yes) (on_board yes)
+      (property "Reference" "V" (at 2.54 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "VPWL" (at 2.54 0 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Sim.Pins" "1=+ 2=-" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Sim.Device" "V" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide)
+      )
+      (property "Sim.Params" "pwl=\"0 -1 50n -1 51n 0 97n 1 171n -1 200n -1\"" (at 2.54 -2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Sim.Type" "PWL" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "simulation" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Voltage source, piece-wise linear" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "VPWL_0_0"
+        (polyline
+          (pts
+            (xy -1.778 -1.016)
+            (xy -0.762 1.016)
+            (xy -0.254 0)
+            (xy 0.762 0)
+            (xy 1.27 1.27)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (text "+" (at 0 1.905 0)
+          (effects (font (size 1.27 1.27)))
+        )
+      )
+      (symbol "VPWL_0_1"
+        (circle (center 0 0) (radius 2.54)
+          (stroke (width 0.254) (type default))
+          (fill (type background))
+        )
+      )
+      (symbol "VPWL_1_1"
+        (pin passive line (at 0 5.08 270) (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 0 -5.08 90) (length 2.54)
+          (name "~" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+  )
+
+  (junction (at 107.95 67.31) (diameter 0) (color 0 0 0 0)
+    (uuid f2a08856-7448-4b09-b4f7-8dc194ee7f4f)
+  )
+
+  (wire (pts (xy 107.95 67.31) (xy 107.95 66.04))
+    (stroke (width 0) (type default))
+    (uuid 1e0c8a4a-16d1-4711-a191-0cbd8207babe)
+  )
+  (wire (pts (xy 107.95 67.31) (xy 107.95 73.66))
+    (stroke (width 0) (type default))
+    (uuid 7d406de5-16ee-48f7-9df0-861b6c5cdf17)
+  )
+  (wire (pts (xy 107.95 55.88) (xy 146.05 55.88))
+    (stroke (width 0) (type default))
+    (uuid c5dbd05e-592b-41d3-906b-8976b245f8a1)
+  )
+  (wire (pts (xy 153.67 67.31) (xy 107.95 67.31))
+    (stroke (width 0) (type default))
+    (uuid efdfacda-ecc4-43ef-b105-2b9c26f49380)
+  )
+  (wire (pts (xy 153.67 55.88) (xy 153.67 67.31))
+    (stroke (width 0) (type default))
+    (uuid fe472a0e-80fe-4d5d-a47b-f52d490fff31)
+  )
+
+  (image (at 133.35 129.54)
+    (uuid a803f017-60b0-42dd-83f3-f8d22847cac8)
+    (data
+      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
+      YNv/AzADrCMUjY8+AAAAAElFTkSuQmCC
+    )
+  )
+
+  (text "A zener diode is like a regular diode except instead of having a high breakdown voltage that was never meant to be reached in normal operations,\nit has a controllable breakdown voltage that is small enough to be reached during a normal circuit operation (like -5v/-10v/etc).\n\nThis is known as the zener effect, a normal diode breakdown voltage is achieve through the avalanche effect.\nIt is possible to mix zener and avalanche effect together to get a breakdown voltage.\n\nThis known breakdown voltage is useful for circuits that need a stable voltage reference given an uncertain input, because after the breakdown voltage is reached, the voltage won't change due to current (assuming it doesn't burn up).\n\nThe image below shows the IV curve of the zener diode from the triangle voltage source.\nWe can see that the voltage is linear except it has some offset, but the current (yellow) spikes at the forward/breakdown voltage (0.8 for forward, -5.6 for breakdown).\n\nThere is confusing terminology used in informally that diodes are one way valves in the sense that current can only go through the diode in one direction.\nThis can make one think that the voltage is one way too (as in it clips the negative voltages out), but this is not the case, we can feed a sinusoidal/triangle/sawtooth voltages into the diode and have it come out scaled.\nIf the breakdown voltages hasn't been hit, the voltage is still going the diode but the diode output is a scaled version of the waveform, it is just that we have near zero current and so zero power.\nWe can see this in image below, the triangle wave voltage source at the diode output is still a triangle wave, it is the current that suppressed until the forward/breakdown voltage is achieved."
+    (at 38.1 111.76 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 70981280-b274-4bf7-916e-8626ff02ab0b)
+  )
+
+  (symbol (lib_id "Simulation_SPICE:VPWL") (at 107.95 60.96 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 4f0a5b2a-7e26-4746-9d07-5af6af30e99f)
+    (property "Reference" "V1" (at 111.76 59.5602 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "VPWL" (at 111.76 62.1002 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "" (at 107.95 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 107.95 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Pins" "1=+ 2=-" (at 107.95 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Sim.Device" "V" (at 107.95 60.96 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Sim.Params" "" (at 111.76 63.3702 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Sim.Type" "PWL" (at 107.95 60.96 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 60e82875-19ff-4927-9f20-226a1b8819fd))
+    (pin "2" (uuid 68c4f69b-7d6c-436c-bc17-a4be8997dc47))
+    (instances
+      (project "zener_diode"
+        (path "/e35db226-7159-4d3a-a1c8-33bd98783d79"
+          (reference "V1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:D_Zener") (at 149.86 55.88 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 7becebb3-99b4-4ce0-a313-9ebf74c3992a)
+    (property "Reference" "D1" (at 149.86 49.53 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "D_Zener" (at 149.86 52.07 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 149.86 55.88 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 149.86 55.88 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 947bddc7-9890-4feb-8e06-47f6339c52ed))
+    (pin "2" (uuid 56bd8163-18e4-4c0c-9634-8df325b30c74))
+    (instances
+      (project "zener_diode"
+        (path "/e35db226-7159-4d3a-a1c8-33bd98783d79"
+          (reference "D1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Simulation_SPICE:0") (at 107.95 73.66 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 959788bf-201f-4552-894a-78584646ac90)
+    (property "Reference" "#GND01" (at 107.95 76.2 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "0" (at 107.95 71.12 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 107.95 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 107.95 73.66 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid bed6254a-6afe-4a64-a263-aa66795666fb))
+    (instances
+      (project "zener_diode"
+        (path "/e35db226-7159-4d3a-a1c8-33bd98783d79"
+          (reference "#GND01") (unit 1)
+        )
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)

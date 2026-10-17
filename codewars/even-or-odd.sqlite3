@@ -1,0 +1,10 @@
+/*
+
+Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+*/
+
+SELECT IIF(1 % 2, 'Odd', 'Even' ) result;
+SELECT IIF(2 % 2, 'Odd', 'Even' ) result;
+SELECT IIF(3 % 2, 'Odd', 'Even' ) result;
+SELECT IIF(4 % 2, 'Odd', 'Even' ) result;

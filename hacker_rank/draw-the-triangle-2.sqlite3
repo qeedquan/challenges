@@ -1,0 +1,23 @@
+/*
+
+P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+Write a query to print the pattern P(20).
+
+*/
+
+WITH alls
+     AS (SELECT Cast('*' AS VARCHAR(50)) AS str,
+                1                        AS num
+         UNION ALL
+         SELECT Cast(Concat(str, ' *') AS VARCHAR(50)),
+                num + 1
+         FROM   alls
+         WHERE  num < 20)
+SELECT str
+FROM   alls 

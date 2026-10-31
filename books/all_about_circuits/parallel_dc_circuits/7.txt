@@ -1,0 +1,9 @@
+Q: Identify which of these circuits is a parallel circuit (there may be more than one shown!):
+
+A: Circuits D and E are parallel circuits.
+Circuit B is a series-parallel circuit as it includes resistors in series and in parallel.
+
+Notes:
+The purpose of this question is to get students to identify what distinguishing characteristic uniquely identifies a circuit as being “parallel.” Once this has been identified, there are several conclusions which may be deduced (regarding voltage drops, currents, resistances, etc.).
+
+Some students may have difficulty distinguishing that circuit E is a parallel circuit, but it is!

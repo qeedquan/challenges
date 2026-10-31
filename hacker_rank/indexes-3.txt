@@ -1,0 +1,7 @@
+Q:
+* In the first design, the fill factor is 20% and the total number of free rows per page are A.
+* In the second design, the fill factor is 40% and the total number of free rows per page are B. 
+Which the followings describes the relation between A and B:
+
+A:
+A = 1.33B

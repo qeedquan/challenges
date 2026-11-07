@@ -1,0 +1,118 @@
+/*
+
+Foreword
+This is the first exercise on SQL - language to manipulate data in "relational" databases. It is quite different from "imperative" programming languages, but widely used as complement to them. Without SQL one generally needs to write lots of dull code on "storage" layer of applications.
+
+There are many flavors of this language, corresponding to various database software. We use SQLite. It generally doesn't use standalone server, rather being "embedded" into other programs. Particularly it comes with every Android program and also is built-in into many desktop programs.
+
+So please generally use SQL-92 standard for guidance, though googling "how to ... in SQLite" may often be helpful.
+
+Problem Statement
+In this problem we have single table and want to do some processing on each of its records (without combining rows or tables between them).
+
+Table is called users and has fields first_name, middle_names, last_name and suffix.
+
+We want to prepare door plaques with their names, automatically converting them to some unified representation - particularly to this one:
+
+FIRSTNAME_M_LASTNAME
+Where M stands for middle initial. Words should be capitalized and separated with underscore. If person doesn't have middle name, use the form FIRSTNAME_LASTNAME.
+
+However, let's completely skip persons who has more than one middle name, or have suffix. Suppose, they are to be processed manually to avoid any possible confusion.
+
+How this works
+There are some setup statements given in "input field". If you write some query in "Solution" area, e.g.
+
+select * from users
+and click SQLite button below, you'll see query result in the "answer" area.
+
+However checker on the server will test your query on different input set. So the "answer" is ignored on submission.
+
+Running queries right here may be not very convenient for larger sets of data, so feel free to use online sandboxes like SQL-fiddle or even locally installed database.
+
+Example
+
+Given the following data:
+
+first_name  middle_names    last_name   suffix
+----------  ------------    ---------   ------
+William     Jefferson       Clinton
+Martin      Luther          King        Jr
+Hillary     Diane Rodham    Clinton
+Barack      Hussein         Obama       II
+Abraham                     Lincoln
+Result should be like this:
+
+WILLIAM_J_CLINTON
+ABRAHAM_LINCOLN
+
+*/
+
+CREATE TABLE IF NOT EXISTS users
+  (
+     first_name   VARCHAR(255),
+     middle_names VARCHAR(255),
+     last_name    VARCHAR(255),
+     suffix       VARCHAR(255)
+  );
+
+INSERT INTO users
+            (first_name,
+             middle_names,
+             last_name,
+             suffix)
+VALUES      ('William',
+             'Jefferson',
+             'Clinton',
+             '');
+
+INSERT INTO users
+            (first_name,
+             middle_names,
+             last_name,
+             suffix)
+VALUES      ('Martin',
+             'Luther',
+             'King',
+             'Jr');
+
+INSERT INTO users
+            (first_name,
+             middle_names,
+             last_name,
+             suffix)
+VALUES      ('Hillary',
+             'Diane Rodham',
+             'Clinton',
+             '');
+
+INSERT INTO users
+            (first_name,
+             middle_names,
+             last_name,
+             suffix)
+VALUES      ('Barack',
+             'Hussein',
+             'Obama',
+             'II');
+
+INSERT INTO users
+            (first_name,
+             middle_names,
+             last_name,
+             suffix)
+VALUES      ('Abraham',
+             '',
+             'Lincoln',
+             '');
+
+SELECT CASE
+         WHEN Substr(middle_names, 1, 1) = '' THEN
+         Format("%s_%s", Upper(first_name), Upper(last_name))
+         ELSE Format("%s_%s_%s", Upper(first_name),
+              Substr(Upper(middle_names), 1, 1),
+              Upper(
+                     last_name))
+       end AS display_name
+FROM   users
+WHERE  suffix = ''
+       AND ( NOT middle_names LIKE '% %' );

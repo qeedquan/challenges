@@ -1,0 +1,13 @@
+*** Terms
+
+Probability Mass Function (PMF):    Discrete Probability Distribution Function
+Probability Density Function (PDF): Continuous Probability Distribution Function
+
+Moments - Quantitative measures related to the shape of the function, kind of like a derivative in some sense
+1st - Expected Value/Mean
+2nd - Variance
+3rd - Skewness
+4th - Kurtosis
+5th - Hyperskewness
+6th - Hypertailedness
+

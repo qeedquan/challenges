@@ -1,0 +1,78 @@
+<!--
+    
+    In response to here.
+    
+    Unlike the previous one, this focuses on code-golf and a new logo, no longer consisting of 6 sticks and the graying-effect as the position of the sticks go deeper.
+    
+    Make the Stack Overflow logo using the following criteria:
+    
+    https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png
+    
+    The tray:
+    
+    Make a gray tray shaped like a bracket facing upwards using the following RGB values: 188, 187, 187 (#bcbbbb)
+    The dimensions of the tray by pixels:
+    https://i.sstatic.net/JSl3y.png
+    
+    The sticks:
+    
+    Make 5 orange sticks using the following RGB values: 244, 128, 36 (#f48024)
+    Each stick has a dimension of 44 by 9 pixels.
+    The gap between the tray and the bottom stick is 8 pixels:
+    https://i.sstatic.net/J81vc.png
+    
+    The sticks' angles:
+    
+    These angles are relative to the horizontal position which is zero degrees.
+    
+    1st stick (bottom): 0°
+    2nd stick (second-to-bottom): 10°
+    3rd stick (middle): 25°
+    4th stick (second-to-top): 40°
+    5th stick (top): 50°
+    The entire image:
+    
+    The image should look like the image given.
+    The entire dimensions of the whole image is 82 by 97 pixels.
+    Stick positions (x, y):
+    
+    These coordinates refer to the top-left points of each stick. The system used is the top-left point of the entire surface being (0, 0), and the numbers increasing as we go down and to the right. We also assume that the left part of the tray is at the leftmost possible point, i.e. at the far bottom left. Feel free to transcribe this into your system.
+    
+    1st stick: 17, 71
+    2nd stick: 19, 51
+    3rd stick: 27, 31
+    4th stick: 40, 13
+    5th stick: 55, 0
+    Rules:
+    
+    The image should apply all descriptions from above.
+    Standard loopholes are forbidden.
+    Shortest code in bytes wins.
+    
+!-->
+
+<html>
+    <head>
+        <title>Stack Overflow Logo</title>
+    </head>
+    <style>
+        div { position: absolute; }
+        .z1 { background:#bcbbbb; top:80px; width:78px; height:34px; }
+        .z2 { background:#ffffff; left:9px; width:60px; height:25px; }
+        .s { background: #f48024; top:-15px; width:44px; height:9px; }
+        .a { top:8px; left:8px; }
+        .b { transform:rotate(10deg) translate(1px,1px); }
+        .c { transform:rotate(15deg) translate(2px,-1px); }
+        .d { transform:rotate(15deg) translate(2px,-1px); }
+        .e { transform:rotate(10deg) translate(1px,1px); }
+    </style>
+    <body>
+        <div class='z1'/>
+        <div class='z2'/>
+        <div class='s a'/>
+        <div class='s b'/>
+        <div class='s c'/>
+        <div class='s d'/>
+        <div class='s e'/>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+Example 2
+I1 1 0 1
+* this is a comment
+R1 1 0 1
+.OP
+.PRINT V(0)
+.PRINT I(R1)
+.PRINT I(I1)
+.PRINT V(1)
+.END

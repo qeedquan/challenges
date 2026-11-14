@@ -1,0 +1,6 @@
+Name:
+
+Gender ([M]ale, [F]emale):
+
+Position ([C]ashier, [D]eli Clerk, [M]anager, [P]roduce Clerk, [S]tock Person):
+

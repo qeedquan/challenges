@@ -1,0 +1,22 @@
+/*
+
+Write a function which takes a number and returns the corresponding ASCII char for that value.
+
+Example:
+
+65 --> 'A'
+97 --> 'a'
+48 --> '0
+For ASCII table, you can refer to http://www.asciitable.com/
+
+*/
+
+fn main() {
+    assert_eq!(character(65), 'A');
+    assert_eq!(character(97), 'a');
+    assert_eq!(character(48), '0');
+}
+
+fn character(ascii: u8) -> char {
+    ascii as char
+}

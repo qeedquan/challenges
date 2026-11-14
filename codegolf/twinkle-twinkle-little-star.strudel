@@ -1,0 +1,39 @@
+/*
+
+Write a program to play the popular English nursery rhyme.
+
+https://commons.wikimedia.org/wiki/File:Twinkle_Twinkle_Little_Star.png
+
+(This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Attribution: Helix84 at the English language Wikipedia; Blahedo at the English language Wikipedia.)
+
+Some Wikipedia articles that may be useful:
+
+Twinkle Twinkle Little Star (has an audio clip of what your program's output should sound like)
+Modern musical symbols (to learn about the music notation used above)
+Musical note#Note frequency (in hertz) (the formula for calculating the frequency of each note)
+Some guidelines for your submission:
+
+Your program must use the computer's sound card. If your programming language doesn't have convenient access to audio hardware, your program must create an output file in some standard format such as WAV or MIDI.
+
+Your program must actually generate its output. For example, embedding the Ogg Vorbis file from Wikipedia would not be allowed.
+
+The audio quality must be acceptable. At the very least, the song should be easily recognizable. Preferably, it should sound good as well.
+
+The focus should be on code size, sound quality, or both (explain which one you decided on). Elegant solutions would also be great. Have fun!
+
+This is a code-golf, so shortest code wins
+
+*/
+
+setcps(0.08)
+let instrument = "piano"
+
+// https://www.youtube.com/watch?v=wHmDhVWXdW4
+let song = `
+C C G G A A G@ F F E E
+D D C@ G G F F E E D@
+G G F F E E D@
+`
+
+note(song).sound(instrument).color("white")._pianoroll().color("cyan")
+

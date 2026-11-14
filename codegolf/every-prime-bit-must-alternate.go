@@ -1,0 +1,79 @@
+/*
+
+A program is bit primed if bits in prime positions must alternate between zero and one, starting with one.
+
+For example, this is a template for a bit primed program with [0..47] bits.
+
+..10.1.0 ...1.0.. .1.0...1 .....0.1 .....0.. .1.0...1
+01234567 89012345 67890123 45678901 23456789 01234567
+Create a bit primed program that takes as input a string and checks if the string is bit primed. The string will be in ASCII and it will be a maximum of 1000 chars.
+
+Rules
+For the purposes of this challenge, the bit string for ABCD is
+
+01000001 01000010 01000011 01000100
+This is code-golf, so the shortest answer in bytes wins.
+
+*/
+
+package main
+
+import (
+	"math"
+)
+
+func main() {
+	assert(altprimebits("ABCD") == false)
+	assert(altprimebits("ABC") == false)
+	assert(altprimebits("$;A;;A;;>@??A/??/@>?/;;?>??>;@@/@") == true)
+	assert(altprimebits(`f[gQqGCStZu2yl3mIEL5mBpO43ulpBaJP4g2sCvYht09xS9XvYv2XK7aZ6P2yh47J2y2Z8s42u91aKQT8dDQ7NZQFDShTWXW7ldVB8IorrV2Fu6ItvMF2y285nz52GizM3X1q0t3F7KMa@Print[29RshFOc0Zh3HKaau;i=0;1Kv6jpY40n3fmIl0YYfiskcIZaATpT76lc6ph3FhR1INU2ptKd8SJ8GXC54akjX4s08vjnaliCS5AQcSh56YS8hQ3xe2xtCV36Gn6lTDAg1tX3cz6G1tn2NB5NLk9Nx4O7Ygfmf3fAs6mnD3PjIzFw2FAK5Qj6i4wW0Gq0RSo7K6aV93L8N75ioRr6oZlCBRzeq3fiQI71KXLADrcO9sJVh24vMZr84plVXqzo52bmuRO6v6LoP47mggmS00gFtCXnwr64YntzbVjNpiyxQMDLXJnd1vUeUvvy0P6CodeGolfib1psOCu9iMxiT2oGesnIoDrqnKHqExqxgh30kFJRwJJk6LvY4M3ZCkKn43oFERtHe7d5qO7AvaF9T4o9T4Cf97MN1anz4TEPlR7FjoqQXaBVV57a5NfSZW97EFeIVn8LsqHjCgg72Vl6usW8L3RWlIo05Lfd8u7jUD0B8SP1fWymaP7kwYNLCg5OUQtLk479hUsE8bJungHwanMinm1xV9naf97dMqobj6jVAM1EzvXguLOal4OXO6DBFtmhHNwzx6u47fVRy7f;AllTrue[XF2uhxta8qS5K0ZeL9pmX3Zhrqn4IHD2hNTdEb9rsQw8raVJvbgSP1uk9OByu;Pick[l=(2EOFI4khaVxpn5d01z8kaARZNiz1oNZkcniL0sD13Sfqrapri0sq9AV12Wh9F1NtYjwbvHtM73G;Join@@(XX9giynmc3Y6ZScD3SIq0QdKvDHh30p3JAlYizir8xzW4d1AfMEIGKom1Hn3m4oGmSZACY012g1a1YRGaFY6YvI5zuzoseFjEDOn002W0qTCFdsmFMO0Wq05jPvEotODJ688d1Ef2iknRra301eEwXtCYAigA294p3Rn1i6dFvhOuIm9Omn1q6w9l4hY3skRZ4Yqc5IAEE0Ncv1eBg3PlT36YUzEEYhK3ekb5EXhrQEjkpJ3kQxL5m1sxu14N971gI8owjVUNyqzPXZ1YrTJ1i6lydT51gFZZzR9e1HPCG2fPzdY96udYT8m7TWZ6L3RnIzapDbrHJU86K4cLk280pmI0VQna8n5F9TsXzUSLkPY6defMJL7z4nPnSLTMFTtO5tYZ48bA723cK4GEM8Vx1oCSuhdn0OKl13tcKo1fenOJO39E5wIHFk35dButjorAWq8bGDteoHS1xt93x71gRJybCd4ruGl9kdZpwml4c8DRO3RlJAOF7nNwcjGzcLDeBS0VW6gOxGjO6LWEk6FgXEMzEmDHbVp0orIRb7jxeTY6QL0ReWS5E1iuqq0mU1ylo5uFjVuHUDobcBxKbajLjzuMuol57II7YxJrT72A0F0mHxP2EMwFtd6vha5DGtLonviT8osn3RVk7fJeY9pv1Dtxoz56Wd1kUcdL5N5PWPhJA118QlaQbPVQCxxbYXNQzi1PSatEcMIlJ3peMac6FOo6EvhpcIEmKJFCMxsO45dEYmoFf0EB3PTEhIVjX3wCvDvuK5FRrFwkB7CUOhSTlGEG61g8wblwOz9Ws3cu7L9LFDMPFn9rInZg1fq57GvB4VEAGQ02eIz6FbiDCK856Ou4uw2QwpDw8po190u7iQFhz9r74bz3exo2cokT1x059vpuKlnlS8iqc8CArq43qahewU4Kstn3gJKHbplFZrZbiX36tGoS5wY80RiosSf981WS8sGJabtcANl9ckq0nz4JS8y4150SVepw07KE2z7TvkyjA0ZBzIo7nxcrn7E2nGiCcsAT8Fv6mArN4b5v9fYWdZqA8a7gabW0ha8pykl63brXwLF3GJDAL0W376IvWk8IKYD7zTdnLCszD4Za8P7b4ExMeseyRXnuv1asg7sjRul9zQP3WryaMPCyB67gCDpt5n5AuSgC9nr7tEzWQCbBI2XFa5ogOgVdF3mkshjAU6sNuSxksnQdx0f1ZxS93Ioq3422Q1zB3BjML7i6NMF0yzxEiVTN2ENDUtK7V9uXrH1rva7TsXx9v9QE5sLf5gsP38LPUh5ZrDxXhfcCjtGDb9r1c00R9gM1xMjTj4cMEWJlXSfkeSM3yU52ZKsUDCq3fDqDE0plp96k8Ra9M84tz5uJ5mNXM8GxuXSS97c9sXXlFB0CaG4n0EP8lbyuUhOLaKUY9EelL68qSq5zlJFTIZf5u7SDEKFSkGU7ml97Gd7gtZ2NBq4hxOTR4uHZaS4ALmvN8o93fipy088oWKynoJSFjIkkZOw3mbSnHnfexKyYpp2Rv4SW3r3kPQ7UonY3Sm;IntegerDigits[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;ToCharacterCode@#,wm;2,Yr3TLDuNJKQ2NHCv9;8])),hmPvHeg3R2mw02;Array[yruQ95uaGFdJu1;PrimeQ,Tr[GjbUXt;0l+1],Xxt;0]],8La1ktK9xi3XXf;#==(UISzsyNOrrXj0eSRMrbIzDOVjfKK0IazH6JdZQY7lzBolXGwU98mJjINCzp7pROIx1rwaTo1JdOSyw6Lw3KVXu85AxiKM7Q2EsvUEQaq8rMhAwdsgWYO21aAVLwuoz5Uz8NnASPJmW4f04z1kgUrAfMjZ0VAFaM2405222oU3y0yc5nxVmKd7AcA5gwCa3labMkKF7lMq5o8prUSy1AVTxNH7E46LVYWjxyw6Q6YRzNPSRJJWtjhVGt8tMkj;i=1-i)&]]Df]&`) == true)
+}
+
+func assert(x bool) {
+	if !x {
+		panic("assertion failed")
+	}
+}
+
+func altprimebits(s string) bool {
+	p := eratosthenes(len(s) * 8)
+	b := 1
+	for _, x := range p {
+		i := x / 8
+		j := 7 - (x % 8)
+		if truth(s[i]&(1<<j)) != b {
+			return false
+		}
+		b = 1 - b
+	}
+	return true
+}
+
+func eratosthenes(n int) []int {
+	r := []int{}
+	if n < 2 {
+		return r
+	}
+
+	l := int(math.Sqrt(float64(n)))
+	p := make([]bool, n)
+	for i := 2; i <= l; i++ {
+		for j := i + i; j < n; j += i {
+			p[j] = true
+		}
+	}
+
+	for i := 2; i < n; i++ {
+		if !p[i] {
+			r = append(r, i)
+		}
+	}
+	return r
+}
+
+func truth(x byte) int {
+	if x != 0 {
+		return 1
+	}
+	return 0
+}

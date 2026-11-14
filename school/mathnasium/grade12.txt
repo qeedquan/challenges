@@ -1,0 +1,32 @@
+*** Precalculus
+
+Counting
+243 base 5 = ___ base 10
+A: 73
+
+Law of SAMEness
+3 + 2*cos^2(x) = 3*sin^2(x)
+sin(x) maximum is 1, so the max value of the right hand side is 3
+So the only value of intersection it can take is 3, so We need sin(x)=1, cos(x)=0
+This happens when x=pi/2, but since these functions are periodic so infinite solutions  
+A: has infinite answers
+
+Proportional Thinking
+The value a varies jointly with b and the cube root of c. If a = 40 when b = 5 and c = 8, what is the value of a when b = 5 and c = 64?
+a=k*b*cbrt(c)
+k=4
+4*5*cbrt(64) = 4*5*4 = 80
+A: 80
+
+Quantity and Denomination
+160 degree = ___ rad
+160*pi/180
+A: 8/9*pi
+
+Wholes and Parts
+Find the reference angle to 7pi/4
+This angle is in quadrant 4, so we have:
+2pi = 8pi/4
+8pi/4 - 7pi/4 = pi/4
+A: pi/4
+

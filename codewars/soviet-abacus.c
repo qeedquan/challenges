@@ -1,0 +1,125 @@
+/*
+
+Soviet abacus
+In the recent past, when calculators were not so common, the abacus was used to calculate prices
+Your task is to learn how to use them
+
+https://pifakit.ru/uploads/article_photo/image/72/large_e53e03e2-d79f-421a-bb85-890ca90acb2c.jpg
+
+You will receive a matrix as input
+Size of matrix: 9x6
+
+Cost of a row:
+1 = 0.01 (or 1 cent/penny)
+2 = 0.1 (or 10 cents/pennies)
+3 = 1
+4 = 10
+5 = 100
+6 = 1000
+
+Each row has its own price (the price is indicated above). To get 1230 - you need to have 3 beads on the left on the 4th row, 2 beads on the 5th row and 1 bead on the 6th row. It is necessary to take into account only the consecutive beads on the left
+
+Because floating-point numbers should not be used for monetary amounts, as we want exact results, you will return a Decimal.
+
+Trivia: this abacus design was popular in the USSR.
+
+Example:
+First:
+[
+    [0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [1, 1, 1, 0, 0, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0, 0, 0, 0],
+] -> 1.3
+
+Second:
+[
+    [1, 0, 0, 1, 1, 1, 0, 0, 0],
+    [1, 0, 1, 0, 0, 1, 0, 0, 0],
+    [1, 1, 1, 0, 0, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 1, 0, 0, 0, 0, 0, 0, 0],
+    [1, 0, 1, 0, 0, 0, 0, 0, 0],
+] -> 1203.11
+
+Third:
+[
+    [1, 1, 1, 1, 1, 1, 0, 0, 0],
+    [1, 1, 1, 0, 0, 0, 0, 0, 0],
+    [1, 1, 1, 1, 0, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 1, 0, 0, 0, 0, 0, 0, 0],
+    [1, 1, 1, 0, 0, 0, 0, 0, 0],
+] -> 3214.36
+
+*/
+
+#include <assert.h>
+#include <stdio.h>
+#include <math.h>
+
+double
+abacus(int m[6][9])
+{
+	double r;
+	int i, j;
+
+	r = 0;
+	for (i = 0; i < 6; i++) {
+		for (j = 0; j < 9; j++) {
+			if (!m[i][j])
+				break;
+		}
+		r += j * pow(10, i - 2);
+	}
+	return r;
+}
+
+void
+test(int m[6][9], double r)
+{
+	double v;
+
+	v = abacus(m);
+	printf("%.2f\n", v);
+	assert(fabs(v - r) < 1e-2);
+}
+
+int
+main()
+{
+	int m1[6][9] = {
+		{ 0, 0, 1, 0, 0, 0, 0, 0, 0 },
+		{ 1, 1, 1, 0, 0, 0, 0, 0, 0 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 0, 0, 1, 0, 0, 0, 0, 0, 0 },
+	};
+
+	int m2[6][9] = {
+		{ 1, 0, 0, 1, 1, 1, 0, 0, 0 },
+		{ 1, 0, 1, 0, 0, 1, 0, 0, 0 },
+		{ 1, 1, 1, 0, 0, 1, 0, 0, 0 },
+		{ 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 1, 1, 0, 0, 0, 0, 0, 0, 0 },
+		{ 1, 0, 1, 0, 0, 0, 0, 0, 0 },
+	};
+
+	int m3[6][9] = {
+		{ 1, 1, 1, 1, 1, 1, 0, 0, 0 },
+		{ 1, 1, 1, 0, 0, 0, 0, 0, 0 },
+		{ 1, 1, 1, 1, 0, 0, 0, 0, 0 },
+		{ 1, 0, 0, 0, 0, 0, 0, 0, 0 },
+		{ 1, 1, 0, 0, 0, 0, 0, 0, 0 },
+		{ 1, 1, 1, 0, 0, 0, 0, 0, 0 },
+	};
+
+	test(m1, 1.3);
+	test(m2, 1203.11);
+	test(m3, 3214.36);
+
+	return 0;
+}

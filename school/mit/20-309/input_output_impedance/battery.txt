@@ -1,0 +1,80 @@
+*** Simple internal resistance model
+
+Batteries used in reality have an internal resistance and it is modeled as a ideal voltage source with a resistor connected in series that causes a voltage drop before the source hits the load.
+More accurate models adds an RC circuit connected in parallel with the resistance to model more effects but this simple model is useful enough in common situations.
+
+Usually the internal resistance is specified in the datasheet so we have the resistance to model with.
+
+Modeling it with one load gives the following equations:
+
+RI - internal resistance
+RL - load resistance
+
+RI + RL = V
+I = V / (RI + RL)
+
+I*RI = VI
+I*RL = VL
+
+So going through the load causes a VI drop in voltage.
+
+Solving this for the example problem:
+
+RI = 1.5
+RL = 3
+V = 9
+I = 9 / (1.5 + 3) = 2
+
+VI = I*RI = 3
+VL = I*RL = 6
+
+So when the battery is driving the load, it will drop to 6V going through the 3V internal resistance.
+
+--------------
+
+Another way to solve this is using the graphical method; plotting the IV curve of the internal resistance and load resistance and finding the intersection.
+
+The IV curve expresses the relation:
+F(V) = I
+
+With a resistance we have:
+F(V) = I = V/R
+
+Batteries deliver power and with a simple internal resistance model, R will be negative in this case, so they operate in the 4th quadrant by ohm's law (positive voltage, negative current due to negative resistance).
+
+Since the internal resistance model follow ohm's law, we know the operating regime will be a line in the 4th quadrant.
+To find the operating regime boundaries solve for the following:
+
+(0, max current) to (max voltage, 0)
+
+Max voltage is given to us via the battery voltage rating (this is the ideal case where there is no internal resistance).
+
+To find max current, use Ohm's law with where current is maximized. Since current is proportional to voltage using Ohm's law, and we know the max voltage, get the following equation:
+Max Current = MaxVoltage / Internal Resistance
+
+This gives us the operating regime as a line equation.
+
+Now we can use that equation with a resistance load IV curve. We need to flip the line from the fourth quadrant to the first quadrant so we can find the intersection.
+
+Solving this for example problem:
+
+RI = 1.5
+RL = 3
+V = 9
+
+So
+MaxVoltage = 9
+MaxCurrent = MaxVoltage / 1.5 = 6
+
+Flipping this to 1st quadrant we have the following points: (0, 6) to (9, 0)
+This gives the equation:
+
+y = -2/3*x + 6
+
+With the resistance of RL we have:
+
+y = x/3
+
+Finding the intersection gives (6, 2) So the operating voltage will be at 6V with 2A draw which matches the above.
+One interesting thing to note is that solving the equation forces the current to be the same (y), and that obeys that resistance in series have the same current.
+

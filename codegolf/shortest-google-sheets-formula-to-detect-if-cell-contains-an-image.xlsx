@@ -1,0 +1,21 @@
+%
+
+Step one
+
+In a new google sheet insert an image into cell A1 with
+
+Insert > Image > Image In Cell
+
+Step two
+
+Create a formula to return TRUE (if the cell contains an image) and FALSE (if the image is missing)
+
+Rules
+
+Only vanilla formulas are allowed. The shortest code in bytes wins.
+
+%
+
+% @Jonathan Allan
+=TYPE(A1)>64>ISFORMULA(A1)
+

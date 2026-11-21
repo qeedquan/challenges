@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "sixteen_led_board-rescue")(type "Legacy")(uri "${KIPRJMOD}/sixteen_led_board-rescue.lib")(options "")(descr ""))
+)

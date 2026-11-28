@@ -1,0 +1,45 @@
+*** Geometry
+
+Counting
+Find the area of the shaded region in the image below.
+A circle embedded in a square of 10 m width.
+
+The area we want is the shaded region inside the square but outside the circle:
+https://www.mathnasium.com/storage/app/uploads/public/638/7af/010/6387af010fe1d799920441.png
+Area of square: 10*10 = 100
+Area of circle: pi*(10/2)^2 = 25
+A: 100 - 25*pi
+
+Law of SAMEness
+Based on the below, what does x=
+Two lines parallel, one line crossing the two parallel lines
+https://www.mathnasium.com/storage/app/uploads/public/638/7af/47e/6387af47ea0b3203515426.png
+-x + 128 = 4x - 2
+5x = 130
+x = 26
+A: 26
+
+Proportional Thinking
+Triangle MNO is similar to Triangle PQR.
+The scale factor is 5:2 If the area of MNO is 100, what is the area of PQR
+https://www.mathnasium.com/storage/app/uploads/public/638/7ae/400/6387ae4006d77105764274.png
+
+Area is proportional to the squared of the scale factor ratio so
+5:2 is 25:4 in terms of area
+100 * 4/25 = 16
+A: 16
+
+Quantity and Denomination
+Line q and line r intersect at point S. What does x = ?
+https://www.mathnasium.com/storage/app/uploads/public/637/6d6/029/6376d60295d73206228164.jpg
+The two degrees has to be equal so:
+50 = 10x => x = 5
+A: x = 5
+
+Wholes and Parts
+Find the perimeter and area.
+https://www.mathnasium.com/storage/app/uploads/public/637/6d5/cce/6376d5ccedd79883377395.jpg
+
+A: Perimeter = 8 + 6pi meters 
+   Area = 12pi meter
+

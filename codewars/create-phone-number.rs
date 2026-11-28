@@ -1,0 +1,24 @@
+/*
+
+Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+Example
+createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+The returned format must be correct in order to complete this challenge.
+Don't forget the space after the closing parentheses!
+
+*/
+
+fn main() {
+    assert_eq!(
+        phonenumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]),
+        "(123) 456-7890"
+    );
+}
+
+fn phonenumber(p: [isize; 10]) -> String {
+    format!(
+        "({}{}{}) {}{}{}-{}{}{}{}",
+        p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7], p[8], p[9]
+    )
+}

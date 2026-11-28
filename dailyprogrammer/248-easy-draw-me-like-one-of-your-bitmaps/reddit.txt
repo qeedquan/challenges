@@ -1,0 +1,26 @@
+600 550
+fill 255 255 255 0 0
+#left ear
+circle 0 0 0 245 75 50
+#rightear
+circle 0 0 0 245 525 50
+#left ear mask
+rect 255 255 255 218 63 100 100
+#right ear mask
+rect 255 255 255 218 437 100 100
+#head
+ellipse 0 0 0 320 300 160 240
+#mouth
+ellipse 0 0 0 380 300 45 90
+#mouth mask
+rect 255 255 255 335 210 60 181
+#left eye
+circle 255 69 0 290 215 38
+fill 255 69 0 280 200
+#right eye
+circle 255 69 0 290 385 38
+fill 255 69 0 280 400
+#antenna
+circle 0 0 0 75 490 45
+bline 0 0 0 160 300 30 345
+bline 0 0 0 30 345 64 446

@@ -1,0 +1,30 @@
+/*
+
+Your task is: Using features of your language of choice, play the Weezer lick (in whatever form).
+
+Inforamtion: The Weezer lick is a fragment of the song "Buddy Holly" by Weezer. (here)
+
+Playing the MP3 file is allowed (i.e. Python's playsound.)
+
+Manipulating anything (aka opening new scripts, windows etc.) is disallowed.
+
+Different octaves can be used.
+
+Example: A5-F5-A5-B5-C6#-B5-A5-F5-E5.
+
+Use whatever you can.
+
+The note frequencies are provided here.
+
+*/
+
+setcps(0.38)
+let instrument = "gm_acoustic_guitar_nylon"
+
+https://www.youtube.com/watch?t=129&v=SiJie3Z7DG8&feature=youtu.be
+let song = `
+A5 F5 A5 B5 C6# B5 A5 F5 E5
+`
+
+note(song).sound(instrument).color("white")._pianoroll().color("cyan")
+

@@ -1,0 +1,19 @@
+<head>
+<title>Local Farmer's Market: <%= data["store_name"] %></title>
+</head>
+<body>
+<table>
+<th>Food</th>
+<th>Price (10 lbs)</th>
+<thead>
+</thead>
+<tbody>
+<% data["foods"].each do |k,v| %>
+<tr>
+<td><%= k %></td>
+<td><%= v %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+</body>

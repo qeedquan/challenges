@@ -1,0 +1,12 @@
+*** SI convention for sign
+
+Current flows into + and out of - (electron flows the other way)
+When setting up equations using KVL, if the current flows from - to +,
+then ohm laws becomes v=-IR rather than v=IR, this convention also applies to capacitors and inductors.
+This is a fixup so the flow obey the same sign convention to get the right answer.
+
+This shows up in a multimeter, when reversing the red and black leads, the sign will flip so we can figure out which is + and - from the sign.
+
+Normal resistors always have a positive resistance. There are some exotic devices like tunnel diodes that seem like they have a negative resistance.
+
+For power, - means it can generate power, + means it dissipates

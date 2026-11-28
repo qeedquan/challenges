@@ -1,0 +1,13 @@
+body {
+    margin: 1em;   
+}
+
+textarea {
+    background: black;
+    color: white;
+}
+
+#input {
+    display: none;
+}
+
